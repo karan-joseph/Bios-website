@@ -171,9 +171,14 @@ footer .logo img{width:160px;height:78px}
   }
 }
 
+@media {
+  .google-form-wrap img{
+    height: 600px; 
+  }
+}
 /* Footer */
 @media (max-width:900px){
   .footer-grid{
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(2,1fr);
   }
 }
