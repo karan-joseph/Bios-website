@@ -164,11 +164,7 @@ footer .logo img{width:160px;height:78px}
 }
 
 /* Contact */
-@media (max-width:1000px){
-  .contact-grid{
-    grid-template-columns:1fr 1fr;
-  }
-}
+
 @media {
   .google-form-wrap{
     height: 40px; 
