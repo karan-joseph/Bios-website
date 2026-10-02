@@ -5953,3 +5953,4 @@ function handleReportExport() {
   }
   loadFinance();document.addEventListener('DOMContentLoaded',()=>{bindFinance();renderFinance();});
 })();
+
