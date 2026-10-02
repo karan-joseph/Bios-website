@@ -1,164 +1,3389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BIOS - Building Intelligent Outcomes With Solution. PC building, computer service, upgrades, spare parts and sales across Karnataka.">
-<title>BIOS | Bulding Intelligent OutCome Solution.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<meta name="theme-color" content="#070911">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIOS - PC, Laptop & Inventory Management Software</title>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="cursor-glow"></div><div class="scroll-progress"></div>
+  <!-- Backdrop for mobile sidebar -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
-<header class="header">
-<nav class="nav container">
-<a class="logo" href="#home" aria-label="BIOS home">
-  <img src="assets/bios-logo.png" alt="BIOS - Building Intelligent Outcomes With Solution">
-</a>
-<button class="menu" aria-label="menu"><i></i><i></i><i></i></button>
-<div class="nav-links"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#process">Process</a><a href="#why">Why BIOS</a><a href="#contact">Contact</a></div>
-<a class="top-call" href="tel:+918884481178">Let's Talk <span>↗</span></a>
-</nav>
-</header>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-container">
+        <!-- Official BIOS Company Logo -->
+        <img src="assets/bios-logo-transparent.png" alt="BIOS Official Logo" class="sidebar-brand-logo brand-logo-img" />
+        <div class="logo-text">
+          <span class="logo-title">BIOS</span>
+          <span class="logo-subtitle">PC & Billing Suite</span>
+        </div>
+      </div>
 
-<main>
-<section class="hero" id="home">
-<div class="noise"></div><div class="hero-lines"></div>
-<div class="container hero-grid">
-<div class="hero-copy reveal">
-<div class="eyebrow"><span></span> Bulding Intelligent OutCome Solution</div>
-<h1>Smart technology<br>built for <strong>you</strong><span>.</span></h1>
-<p>From custom PC builds to professional repairs and upgrades — BIOS delivers practical technology solutions with precision.</p>
-<div class="buttons"><a class="btn primary" href="#services">Explore Services <b>→</b></a><a class="btn glass" href="https://wa.me/918884481178?text=Hi%20BIOS,%20I%20need%20a%20computer%20solution." target="_blank">WhatsApp <b>↗</b></a></div>
-<div class="mini-stats"><div><b>PC</b><span>BUILDING</span></div><div><b>PRO</b><span>SERVICE</span></div><div><b>ALL</b><span>KARNATAKA</span></div></div>
-</div>
-<div class="hero-art reveal delay2">
-<div class="halo halo1"></div><div class="halo halo2"></div>
-<div class="device">
-<div class="device-top"><span>BIOS // SYSTEM CORE</span><em>● ACTIVE</em></div>
-<div class="device-screen"><div class="core"><div class="core-ring r1"></div><div class="core-ring r2"></div><img src="assets/bios-logo.png" alt="BIOS logo" class="hero-logo"></div><div class="data"><span>PERFORMANCE</span><strong>98.6%</strong><i><u></u></i><span>EFFICIENCY</span><strong>94.2%</strong><i><u></u></i></div></div>
-<div class="device-bottom"><span>SMART</span><span>RELIABLE</span><span>UPGRADABLE</span></div>
-</div>
-<div class="brand-badge"><img src="assets/bios-logo.png" alt="BIOS"><span>OFFICIAL BIOS BRAND</span></div><div class="float-card fc1">✦ <span>SMART TECH</span></div><div class="float-card fc2">◈ <span>PRECISION</span></div><div class="float-card fc3">⚡ <span>PERFORMANCE</span></div>
-</div>
-</div>
-<div class="scroll">SCROLL <span>↓</span></div>
-</section>
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <li>
+          <a class="nav-link active" data-target="dashboard">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="7" height="9" rx="1"/>
+              <rect x="14" y="3" width="7" height="5" rx="1"/>
+              <rect x="14" y="12" width="7" height="9" rx="1"/>
+              <rect x="3" y="16" width="7" height="5" rx="1"/>
+            </svg>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" data-target="enquiries">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            Enquiries
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" data-target="bookings">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            Bookings
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" data-target="billing">
+            <svg viewBox="0 0 24 24">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            Billing / Invoices
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" data-target="service">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+            Service / Repairs
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" data-target="purchases">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="9" cy="21" r="1"/>
+              <circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            Purchases
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" data-target="inventory">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+            Stock Availability
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" data-target="pcbuilder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <rect x="9" y="9" width="6" height="6"/>
+              <line x1="9" y1="1" x2="9" y2="4"/>
+              <line x1="15" y1="1" x2="15" y2="4"/>
+              <line x1="9" y1="20" x2="9" y2="23"/>
+              <line x1="15" y1="20" x2="15" y2="23"/>
+              <line x1="20" y1="9" x2="23" y2="9"/>
+              <line x1="20" y1="14" x2="23" y2="14"/>
+              <line x1="1" y1="9" x2="4" y2="9"/>
+              <line x1="1" y1="14" x2="4" y2="14"/>
+            </svg>
+            PC Build / Assembly
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" data-target="returns">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <polyline points="1 4 1 10 7 10"/>
+              <polyline points="23 20 23 14 17 14"/>
+              <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
+            </svg>
+            Returns & Suppliers
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" data-target="finance">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M3 3v18h18"/>
+              <path d="M7 16v-5"/><path d="M12 16V7"/><path d="M17 16V4"/>
+            </svg>
+            Finance & P&L
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" data-target="reports">
+            <svg viewBox="0 0 24 24">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+            Reports Center
+          </a>
+        </li>
+      </nav>
+    </aside>
 
-<section class="marquee"><div><span>PC BUILDING</span> ✦ <span>COMPUTER & LAPTOP SERVICE</span> ✦ <span>UPGRADES</span> ✦ <span>SPARE PARTS</span> ✦ <span>SALES</span> ✦ <span>PICKUP & DROP</span> ✦</div></section>
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+      <!-- Header -->
+      <header>
+        <div class="header-right-mobile">
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Sidebar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+        <div class="header-title-area">
+          <h2 id="header-view-title">Dashboard</h2>
+          <div class="header-brand-chip">
+            <img src="assets/bios-logo-transparent.png" alt="BIOS" class="header-brand-logo brand-logo-img" />
+            <span class="header-brand-tagline">Building Intelligent Outcomes</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="date-indicator">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <span id="current-date-span">August 14, 2026</span>
+          </div>
+        </div>
+      </header>
 
-<section class="section about" id="about">
-<div class="container about-grid">
-<div class="section-label reveal">01 / ABOUT BIOS</div>
-<div class="about-main reveal delay1">
-<p class="overline">BUILDING INTELLIGENT OUTCOMES WITH SOLUTION</p>
-<h2>We make technology<br><em>less complicated.</em></h2>
-<p class="lead">BIOS is a technology-focused computer solutions brand helping customers build, repair, upgrade and maintain their systems with the right combination of hardware, service and practical advice.</p>
-<div class="about-cards"><div><b>01</b><strong>UNDERSTAND</strong><p>We identify the actual requirement before recommending a solution.</p></div><div><b>02</b><strong>SOLVE</strong><p>We focus on reliable, practical and performance-oriented solutions.</p></div><div><b>03</b><strong>GROW</strong><p>We help your system evolve as your needs change.</p></div></div>
-</div>
-</div>
-</section>
+      <!-- Main Dynamic Content Area -->
+      <main class="content-area">
+        
+        <!-- ==================== DASHBOARD VIEW ==================== -->
+        <section id="dashboard-section" class="page-section active">
+          <!-- Official BIOS Company Brand Banner -->
+          <div class="dashboard-brand-banner">
+            <div class="dashboard-brand-left">
+              <img src="assets/bios-logo-transparent.png" alt="BIOS Official Logo" class="dashboard-brand-logo brand-logo-img" />
+              <div>
+                <div class="dashboard-brand-title">BIOS</div>
+                <div class="dashboard-brand-subtitle">Building Intelligent Outcomes with Solutions</div>
+                <div class="dashboard-brand-badges">
+                  <span class="dashboard-brand-badge">📍 No 38/1 1st main road KP Agrahar Magadi Road bangalore-23</span>
+                  <span class="dashboard-brand-badge">📞 +91 8884481178 & 7676988838</span>
+                  <span class="dashboard-brand-badge">✉️ biosgroupofcompany@gmail.com</span>
+                  <span class="dashboard-brand-badge">🏛️ GSTIN: #NA</span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard-brand-right">
+              <div><strong>Enterprise Suite:</strong> v2.4.0</div>
+              <div><strong>Status:</strong> <span style="color: var(--success); font-weight: 700;">● Connected</span></div>
+              <div style="font-size: 0.72rem; color: #94a3b8;">Official BIOS System Active</div>
+            </div>
+          </div>
 
-<section class="section services" id="services">
-<div class="container">
-<div class="section-title reveal"><div><div class="section-label">02 / SERVICES</div><h2>One place for your<br><em>computer needs.</em></h2></div><p>Professional support for home users, creators, gamers, offices and businesses — with practical solutions from diagnosis to delivery.</p></div>
-<div class="service-grid">
-<article class="service s1 reveal"><div class="service-img img-pc"><div class="img-overlay"></div><span>01</span></div><div class="service-body"><small>BUILD / CUSTOM</small><h3>PC Building</h3><p>Custom-built systems selected around your budget, workload and performance goals.</p><a href="#contact">Build with BIOS <b>→</b></a></div></article>
-<article class="service s2 reveal delay1"><div class="service-img img-repair"><div class="img-overlay"></div><span>02</span></div><div class="service-body"><small>DIAGNOSE / REPAIR</small><h3>Computer & Laptop Service</h3><p>Professional troubleshooting, maintenance, software and hardware support.</p><a href="#contact">Book service <b>→</b></a></div></article>
-<article class="service s3 reveal delay2"><div class="service-img img-upgrade"><div class="img-overlay"></div><span>03</span></div><div class="service-body"><small>BOOST / UPGRADE</small><h3>Upgrades</h3><p>RAM, SSD, storage, cooling and component upgrades to improve your system.</p><a href="#contact">Upgrade now <b>→</b></a></div></article>
-<article class="service s4 reveal"><div class="service-img img-parts"><div class="img-overlay"></div><span>04</span></div><div class="service-body"><small>COMPONENTS / PARTS</small><h3>Spare Parts</h3><p>Computer components and replacement parts for a wide range of systems.</p><a href="#contact">Check availability <b>→</b></a></div></article>
-<article class="service s5 reveal delay1"><div class="service-img img-sales"><div class="img-overlay"></div><span>05</span></div><div class="service-body"><small>TECH / PRODUCTS</small><h3>Sales,New & Refurbished</h3><p>Technology products selected for practical everyday and professional requirements.</p><a href="#contact">Enquire now <b>→</b></a></div></article>
-<article class="service s6 reveal delay2"><div class="service-img img-pickup"><div class="img-overlay"></div><span>06</span></div><div class="service-body"><small>CONVENIENCE / SUPPORT</small><h3>Pickup & Drop</h3><p>Convenient pickup and drop support available with service coverage across Karnataka.</p><a href="#contact">Get assistance <b>→</b></a></div></article>
-</div>
-</div>
-</section>
+          <!-- Main Stat Cards Grid -->
+          <div class="dashboard-grid">
+            <!-- Stat Card 1 -->
+            <div class="stat-card enquiries">
+              <div class="stat-details">
+                <span class="stat-label">Total Enquiries</span>
+                <span class="stat-value" id="dash-total-enquiries">0</span>
+              </div>
+              <div class="stat-icon-wrapper">
+                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+            </div>
+            <!-- Stat Card 2 -->
+            <div class="stat-card bookings">
+              <div class="stat-details">
+                <span class="stat-label">Total Bookings</span>
+                <span class="stat-value" id="dash-total-bookings">0</span>
+              </div>
+              <div class="stat-icon-wrapper">
+                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+            </div>
+            <!-- Stat Card 3 -->
+            <div class="stat-card billing">
+              <div class="stat-details">
+                <span class="stat-label">Total Billing Amount</span>
+                <span class="stat-value" id="dash-total-billing">₹0.00</span>
+              </div>
+              <div class="stat-icon-wrapper">
+                <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+            </div>
+          </div>
 
-<section class="section process" id="process">
-<div class="container">
-<div class="section-title reveal"><div><div class="section-label">03 / OUR PROCESS</div><h2>Simple. Clear.<br><em>Professional.</em></h2></div></div>
-<div class="process-grid">
-<div class="process-item reveal"><span>01</span><div class="process-icon">⌕</div><h3>Understand</h3><p>Tell us what your system needs and what you want to achieve.</p></div>
-<div class="process-item reveal delay1"><span>02</span><div class="process-icon">◇</div><h3>Diagnose</h3><p>We identify the issue or requirement and explain the practical options.</p></div>
-<div class="process-item reveal delay2"><span>03</span><div class="process-icon">⚙</div><h3>Build / Fix</h3><p>Our work focuses on careful installation, service and testing.</p></div>
-<div class="process-item reveal delay3"><span>04</span><div class="process-icon">✓</div><h3>Deliver</h3><p>We aim to return a solution that is ready for real-world use.</p></div>
-</div>
-</div>
-</section>
+          <!-- Inventory & Purchases Banner Cards -->
+          <div class="metric-cards-row">
+            <div class="metric-card purple">
+              <span class="metric-card-label">Total Stock Value</span>
+              <span class="metric-card-value" id="dash-stock-value">₹0.00</span>
+              <span class="metric-card-sub" id="dash-stock-items-count">0 items in catalog</span>
+            </div>
+            <div class="metric-card amber">
+              <span class="metric-card-label">Total Purchases</span>
+              <span class="metric-card-value" id="dash-total-purchases">₹0.00</span>
+              <span class="metric-card-sub" id="dash-purchase-invoices-count">0 purchase bills</span>
+            </div>
+            <div class="metric-card rose">
+              <span class="metric-card-label">Low / Out of Stock</span>
+              <span class="metric-card-value" id="dash-low-stock-count">0</span>
+              <span class="metric-card-sub">Items requiring restock</span>
+            </div>
+            <div class="metric-card emerald">
+              <span class="metric-card-label">Finished PCs in Stock</span>
+              <span class="metric-card-value" id="dash-finished-pcs-count">0</span>
+              <span class="metric-card-sub">Prebuilt & custom rigs ready</span>
+            </div>
+            <div class="metric-card cyan">
+              <span class="metric-card-label">Active Service Jobs</span>
+              <span class="metric-card-value" id="dash-active-jobs-count">0</span>
+              <span class="metric-card-sub" id="dash-service-ready-count">0 ready for delivery</span>
+            </div>
+          </div>
 
-<section class="section why" id="why">
-<div class="container">
-<div class="section-label reveal">04 / WHY BIOS</div>
-<div class="why-head reveal"><h2>Our values are<br><em>our standard.</em></h2><p>Every BIOS interaction is built around five simple principles.</p></div>
-<div class="values">
-<div class="value v1 reveal"><span>01</span><b>INTELLIGENCE</b><p>Think before we recommend.</p></div>
-<div class="value v2 reveal delay1"><span>02</span><b>GROWTH</b><p>Build for what comes next.</p></div>
-<div class="value v3 reveal delay2"><span>03</span><b>FOCUS</b><p>Keep the solution clear.</p></div>
-<div class="value v4 reveal delay3"><span>04</span><b>RELIABILITY</b><p>Do the work carefully.</p></div>
-<div class="value v5 reveal delay1"><span>05</span><b>INNOVATION</b><p>Keep moving with technology.</p></div>
-</div>
-</div>
-</section>
+          <!-- Secondary Grid -->
+          <div class="dashboard-details-grid">
+            <!-- Recent Activity -->
+            <div class="dashboard-card">
+              <div class="card-title-area">
+                <h4>Recent Operations & Activity</h4>
+                <span class="badge badge-new" style="background-color: var(--secondary-light); color: var(--secondary-hover);">Live Updates</span>
+              </div>
+              <div class="activity-list" id="dashboard-activity-list">
+                <!-- Populated dynamically -->
+                <div class="no-data-msg" style="padding: 1.5rem !important;">
+                  No recent activities recorded yet.
+                </div>
+              </div>
+            </div>
 
-<section class="section contact" id="contact">
-<div class="container contact-box reveal">
-<div class="contact-glow"></div>
-<div class="section-label">05 / CONTACT BIOS</div>
-<div class="contact-grid">
-<div><h2>Let's solve your<br><em>next tech problem.</em></h2><p>Need a PC build, service, upgrade, spare part or product? Reach BIOS directly.</p><div class="buttons"><a class="btn primary" href="tel:+918884481178">Call BIOS →</a><a class="btn glass" href="https://wa.me/918884481178?text=Hi%20BIOS,%20I%20want%20to%20know%20about%20your%20services." target="_blank">WhatsApp ↗</a></div></div>
-<div class="contact-details"><div class="contact-form-card">
-  <div class="contact-form-head">
-    <div>
-      <small>QUICK ENQUIRY</small>
-      <h3>Tell us what you need</h3>
-      <p>Send your requirement to BIOS and our team can get back to you.</p>
+            <!-- Status & Enquiries Breakdown -->
+            <div class="dashboard-card">
+              <div class="card-title-area">
+                <h4>Enquiry Breakdown</h4>
+              </div>
+              <div class="status-breakdown-list">
+                <div class="status-breakdown-item">
+                  <div class="status-label-row">
+                    <span>New Enquiries</span>
+                    <span id="breakdown-new-count">0</span>
+                  </div>
+                  <div class="status-progress-track">
+                    <div class="status-progress-bar" id="breakdown-new-bar" style="width: 0%; background-color: var(--info);"></div>
+                  </div>
+                </div>
+                <div class="status-breakdown-item">
+                  <div class="status-label-row">
+                    <span>Follow Up</span>
+                    <span id="breakdown-followup-count">0</span>
+                  </div>
+                  <div class="status-progress-track">
+                    <div class="status-progress-bar" id="breakdown-followup-bar" style="width: 0%; background-color: var(--warning);"></div>
+                  </div>
+                </div>
+                <div class="status-breakdown-item">
+                  <div class="status-label-row">
+                    <span>Converted to Booking</span>
+                    <span id="breakdown-booking-count">0</span>
+                  </div>
+                  <div class="status-progress-track">
+                    <div class="status-progress-bar" id="breakdown-booking-bar" style="width: 0%; background-color: var(--success);"></div>
+                  </div>
+                </div>
+                <div class="status-breakdown-item">
+                  <div class="status-label-row">
+                    <span>Cancelled</span>
+                    <span id="breakdown-cancelled-count">0</span>
+                  </div>
+                  <div class="status-progress-track">
+                    <div class="status-progress-bar" id="breakdown-cancelled-bar" style="width: 0%; background-color: var(--danger);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== ENQUIRIES VIEW ==================== -->
+        <section id="enquiries-section" class="page-section">
+          <div class="section-header">
+            <div class="section-header-left">
+              <h3>Enquiries Management</h3>
+              <p>Register, update, and follow up with potential customers.</p>
+            </div>
+            <button class="btn btn-primary" id="open-add-enquiry-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add Enquiry
+            </button>
+          </div>
+
+          <!-- Filters -->
+          <div class="filter-bar">
+            <div class="form-group-inline" style="flex-grow: 2;">
+              <label for="enquiry-search">Search Customers</label>
+              <input type="text" id="enquiry-search" placeholder="Search by name or mobile number...">
+            </div>
+            <div class="form-group-inline">
+              <label for="enquiry-filter-status">Filter Status</label>
+              <select id="enquiry-filter-status">
+                <option value="All">All Statuses</option>
+                <option value="New">New</option>
+                <option value="Follow Up">Follow Up</option>
+                <option value="Booking">Booking</option>
+                <option value="Cancelled">Cancelled</option>
+              </select>
+            </div>
+            <div class="form-group-inline">
+              <label for="enquiry-filter-source">Filter Source</label>
+              <select id="enquiry-filter-source">
+                <option value="All">All Sources</option>
+                <option value="Walking">Walking</option>
+                <option value="Referral">Referral</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer Name</th>
+                  <th>Mobile Number</th>
+                  <th>Date</th>
+                  <th>Source</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="enquiry-table-body">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ==================== BOOKINGS VIEW ==================== -->
+        <section id="bookings-section" class="page-section">
+          <div class="section-header">
+            <div class="section-header-left">
+              <h3>Bookings Management</h3>
+              <p>Manage confirmed customer bookings and payment details.</p>
+            </div>
+            <button class="btn btn-primary" id="open-add-booking-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              New Booking
+            </button>
+          </div>
+
+          <!-- Filters -->
+          <div class="filter-bar">
+            <div class="form-group-inline" style="flex-grow: 2;">
+              <label for="booking-search">Search Bookings</label>
+              <input type="text" id="booking-search" placeholder="Search by customer name...">
+            </div>
+            <div class="form-group-inline">
+              <label for="booking-filter-payment">Payment Method</label>
+              <select id="booking-filter-payment">
+                <option value="All">All Methods</option>
+                <option value="Cash">Cash</option>
+                <option value="UPI">UPI</option>
+                <option value="Card">Card</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer Name</th>
+                  <th>Booking Date</th>
+                  <th>Booking Amount</th>
+                  <th>Payment Method</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="booking-table-body">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ==================== BILLING VIEW ==================== -->
+        <section id="billing-section" class="page-section">
+          <div class="section-header">
+            <div class="section-header-left">
+              <h3>Invoicing & Sales Billing</h3>
+              <p>Generate professional invoices with automated GST calculation and live stock deduction.</p>
+            </div>
+            <button class="btn btn-primary" id="open-new-invoice-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Generate Invoice
+            </button>
+          </div>
+
+          <!-- Table -->
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Invoice No</th>
+                  <th>Customer Details</th>
+                  <th>Product / Stock Item</th>
+                  <th>Qty</th>
+                  <th>Base Amount</th>
+                  <th>GST (18%)</th>
+                  <th>Total Amount</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="billing-table-body">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ==================== SERVICE / REPAIRS VIEW ==================== -->
+        <section id="service-section" class="page-section">
+          <div class="section-header">
+            <div class="section-header-left">
+              <h3>Laptop & PC Service Management</h3>
+              <p>Create job cards, estimations, service invoices, track customer repairs, and manage spare parts with live stock deduction.</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button type="button" class="btn btn-secondary" id="open-new-estimation-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                + New Estimation
+              </button>
+              <button type="button" class="btn btn-primary" id="open-new-jobcard-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                + New Service / Job Card
+              </button>
+            </div>
+          </div>
+
+          <!-- Service Dashboard Stats Banner (7 KPIs) -->
+          <div class="metric-cards-row">
+            <div class="metric-card amber">
+              <span class="metric-card-label">Open Jobs</span>
+              <span class="metric-card-value" id="svc-metric-open-count">0</span>
+              <span class="metric-card-sub">Waiting for inspection</span>
+            </div>
+            <div class="metric-card purple">
+              <span class="metric-card-label">Under Service</span>
+              <span class="metric-card-value" id="svc-metric-underservice-count">0</span>
+              <span class="metric-card-sub">In progress by tech</span>
+            </div>
+            <div class="metric-card emerald">
+              <span class="metric-card-label">Ready for Delivery</span>
+              <span class="metric-card-value" id="svc-metric-ready-count">0</span>
+              <span class="metric-card-sub">Completed & tested</span>
+            </div>
+            <div class="metric-card secondary-card">
+              <span class="metric-card-label">Closed Jobs</span>
+              <span class="metric-card-value" id="svc-metric-closed-count">0</span>
+              <span class="metric-card-sub">Delivered & closed</span>
+            </div>
+            <div class="metric-card cyan">
+              <span class="metric-card-label">Today's Services</span>
+              <span class="metric-card-value" id="svc-metric-today-count">0</span>
+              <span class="metric-card-sub">Received today</span>
+            </div>
+            <div class="metric-card rose">
+              <span class="metric-card-label">Pending Payments</span>
+              <span class="metric-card-value" id="svc-metric-pending-pay">₹0.00</span>
+              <span class="metric-card-sub" id="svc-metric-pending-count">0 pending bills</span>
+            </div>
+            <div class="metric-card indigo">
+              <span class="metric-card-label">Today's Service Amount</span>
+              <span class="metric-card-value" id="svc-metric-today-amt">₹0.00</span>
+              <span class="metric-card-sub">Billed today</span>
+            </div>
+          </div>
+
+          <!-- Service Sub-Nav Tabs -->
+          <div class="sub-nav-tabs">
+            <button class="sub-tab-btn active" data-service-tab="jobcards">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Job Cards
+            </button>
+            <button class="sub-tab-btn" data-service-tab="estimations">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              Estimations & Quotations
+            </button>
+            <button class="sub-tab-btn" data-service-tab="invoices">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              Service Invoices & Billing
+            </button>
+            <button class="sub-tab-btn" data-service-tab="history">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Service History Search
+            </button>
+            <button class="sub-tab-btn" data-service-tab="customers">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Customer & Device Directory
+            </button>
+          </div>
+
+          <!-- TAB 1: Job Cards -->
+          <div id="service-tab-jobcards" class="sub-tab-pane active">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+              <div class="form-group-inline" style="flex-grow: 2;">
+                <label for="jobcard-search">Search Job Cards</label>
+                <input type="text" id="jobcard-search" placeholder="Search by Job Card #, Customer Name, Mobile, Serial #, Brand...">
+              </div>
+              <div class="form-group-inline">
+                <label for="jobcard-filter-status">Filter Status</label>
+                <select id="jobcard-filter-status">
+                  <option value="All">All Statuses</option>
+                  <option value="Open">Open</option>
+                  <option value="Under Service">Under Service</option>
+                  <option value="Ready">Ready</option>
+                  <option value="Delivered">Delivered</option>
+                  <option value="Closed">Closed</option>
+                </select>
+              </div>
+              <div class="form-group-inline">
+                <label for="jobcard-filter-type">Device Type</label>
+                <select id="jobcard-filter-type">
+                  <option value="All">All Types</option>
+                  <option value="Laptop">Laptop</option>
+                  <option value="Desktop">Desktop / PC</option>
+                  <option value="All-in-One">All-in-One</option>
+                  <option value="Other">Other Device</option>
+                </select>
+              </div>
+              <button class="btn btn-secondary" id="reset-jobcard-filters-btn" style="height: 42px;">Reset</button>
+            </div>
+
+            <!-- Job Cards Table -->
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Job Card #</th>
+                    <th>Date & Exp. Delv</th>
+                    <th>Customer Name & Mobile</th>
+                    <th>Device (Type / Brand / Model)</th>
+                    <th>Serial #</th>
+                    <th>Customer Complaint</th>
+                    <th>Technician</th>
+                    <th>Labour & Parts (₹)</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="jobcard-table-body">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 2: Estimations -->
+          <div id="service-tab-estimations" class="sub-tab-pane">
+            <div class="filter-bar">
+              <div class="form-group-inline" style="flex-grow: 2;">
+                <label for="estimation-search">Search Estimations</label>
+                <input type="text" id="estimation-search" placeholder="Search by Estimate #, Customer Name, Mobile, Device...">
+              </div>
+              <div class="form-group-inline">
+                <label for="estimation-filter-status">Approval Status</label>
+                <select id="estimation-filter-status">
+                  <option value="All">All</option>
+                  <option value="Draft">Draft / Pending Approval</option>
+                  <option value="Approved">Approved (Converted to Job Card)</option>
+                  <option value="Rejected">Rejected</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Estimate #</th>
+                    <th>Date</th>
+                    <th>Customer Name & Mobile</th>
+                    <th>Device Details</th>
+                    <th>Labour</th>
+                    <th>Parts & Accessories</th>
+                    <th>GST (₹)</th>
+                    <th>Total Estimate (₹)</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="estimation-table-body">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 3: Service Invoices -->
+          <div id="service-tab-invoices" class="sub-tab-pane">
+            <div class="filter-bar">
+              <div class="form-group-inline" style="flex-grow: 2;">
+                <label for="svc-inv-search">Search Service Invoices</label>
+                <input type="text" id="svc-inv-search" placeholder="Search by Invoice #, Job Card #, Customer, Mobile...">
+              </div>
+              <div class="form-group-inline">
+                <label for="svc-inv-filter-payment">Payment Status</label>
+                <select id="svc-inv-filter-payment">
+                  <option value="All">All Statuses</option>
+                  <option value="Paid">Paid</option>
+                  <option value="Partially Paid">Partially Paid</option>
+                  <option value="Pending">Pending</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Service Inv #</th>
+                    <th>Date</th>
+                    <th>Job Card #</th>
+                    <th>Customer Details</th>
+                    <th>Device Specs</th>
+                    <th>Labour Charges</th>
+                    <th>Parts Charges</th>
+                    <th>GST</th>
+                    <th>Grand Total</th>
+                    <th>Payment Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="svc-invoice-table-body">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 4: Service History Search -->
+          <div id="service-tab-history" class="sub-tab-pane">
+            <div class="filter-bar" style="background: var(--card-bg); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+              <div class="form-group-inline" style="flex-grow: 3;">
+                <label for="history-search-input" style="font-weight: 700; font-size: 0.95rem; color: var(--primary);">
+                  🔍 Search Service History (by Customer Name, Mobile Number, Job Card #, Serial Number, or Invoice #)
+                </label>
+                <input type="text" id="history-search-input" placeholder="Type customer name, 10-digit mobile, serial number, JC-2026-..., or SINV-2026-..." style="font-size: 1rem; padding: 0.65rem 0.85rem;">
+              </div>
+              <button class="btn btn-secondary" id="clear-history-search-btn" style="height: 44px; margin-top: 1.45rem;">Clear Search</button>
+            </div>
+
+            <div id="service-history-results-container">
+              <!-- Rendered dynamically: Device history cards and timeline -->
+            </div>
+          </div>
+
+          <!-- TAB 5: Customers & Devices Directory -->
+          <div id="service-tab-customers" class="sub-tab-pane">
+            <div class="filter-bar">
+              <div class="form-group-inline" style="flex-grow: 2;">
+                <label for="svc-customer-search">Search Customers</label>
+                <input type="text" id="svc-customer-search" placeholder="Search by customer name, phone, device serial...">
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Customer Name</th>
+                    <th>Mobile Number</th>
+                    <th>Address</th>
+                    <th>Registered Devices</th>
+                    <th>Total Services</th>
+                    <th>Total Spent</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="svc-customers-table-body">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== PURCHASES VIEW ==================== -->
+        <section id="purchases-section" class="page-section">
+          <div class="section-header">
+            <div class="section-header-left">
+              <h3>Purchase Management</h3>
+              <p>Record inward purchases from suppliers. Stock automatically increases upon saving.</p>
+            </div>
+            <button class="btn btn-primary" id="open-new-purchase-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              + New Purchase Entry
+            </button>
+          </div>
+
+          <!-- Purchase Summary Metrics -->
+          <div class="metric-cards-row">
+            <div class="metric-card amber">
+              <span class="metric-card-label">Total Purchases</span>
+              <span class="metric-card-value" id="purchase-metric-total">₹0.00</span>
+              <span class="metric-card-sub" id="purchase-metric-count">0 Invoices</span>
+            </div>
+            <div class="metric-card emerald">
+              <span class="metric-card-label">Total Paid</span>
+              <span class="metric-card-value" id="purchase-metric-paid">₹0.00</span>
+              <span class="metric-card-sub">Cleared to suppliers</span>
+            </div>
+            <div class="metric-card rose">
+              <span class="metric-card-label">Outstanding Balance</span>
+              <span class="metric-card-value" id="purchase-metric-balance">₹0.00</span>
+              <span class="metric-card-sub">Pending supplier dues</span>
+            </div>
+          </div>
+
+          <!-- Filters -->
+          <div class="filter-bar">
+            <div class="form-group-inline" style="flex-grow: 2;">
+              <label for="purchase-search">Search Purchases</label>
+              <input type="text" id="purchase-search" placeholder="Search by Supplier, Invoice No, Item Code, Brand...">
+            </div>
+            <div class="form-group-inline">
+              <label for="purchase-filter-status">Payment Status</label>
+              <select id="purchase-filter-status">
+                <option value="All">All Statuses</option>
+                <option value="Paid">Fully Paid</option>
+                <option value="Partial">Partial</option>
+                <option value="Unpaid">Unpaid</option>
+              </select>
+            </div>
+            <div class="form-group-inline">
+              <label for="purchase-filter-from">From Date</label>
+              <input type="date" id="purchase-filter-from">
+            </div>
+            <div class="form-group-inline">
+              <label for="purchase-filter-to">To Date</label>
+              <input type="date" id="purchase-filter-to">
+            </div>
+            <button class="btn btn-secondary" id="reset-purchase-filters-btn" style="height: 42px;">Reset</button>
+          </div>
+
+          <!-- Purchases Table -->
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Purchase Inv #</th>
+                  <th>Date</th>
+                  <th>Supplier</th>
+                  <th>Item Description</th>
+                  <th>Brand / Model</th>
+                  <th>Qty</th>
+                  <th>Rate (₹)</th>
+                  <th>GST</th>
+                  <th>Total (₹)</th>
+                  <th>Paid / Balance</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="purchases-table-body">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ==================== STOCK AVAILABILITY VIEW ==================== -->
+        <section id="inventory-section" class="page-section">
+          <div class="section-header">
+            <div class="section-header-left">
+              <h3>Stock Availability & Inventory</h3>
+              <p>Real-time stock ledger, valuation, serial tracking, and minimum stock threshold alerts.</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button class="btn btn-secondary" id="open-stock-adjust-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                Stock Adjustment (±)
+              </button>
+              <button class="btn btn-primary" id="open-add-stock-item-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                + Add Master Item
+              </button>
+            </div>
+          </div>
+
+          <!-- Stock Summary Badges Row -->
+          <div class="metric-cards-row">
+            <div class="metric-card purple">
+              <span class="metric-card-label">Total Inventory Value</span>
+              <span class="metric-card-value" id="stock-metric-total-val">₹0.00</span>
+              <span class="metric-card-sub" id="stock-metric-total-items">0 Unique Items</span>
+            </div>
+            <div class="metric-card emerald">
+              <span class="metric-card-label">In Stock Items</span>
+              <span class="metric-card-value" id="stock-metric-available-count">0</span>
+              <span class="metric-card-sub">Healthy inventory level</span>
+            </div>
+            <div class="metric-card amber">
+              <span class="metric-card-label">Low Stock Alerts</span>
+              <span class="metric-card-value" id="stock-metric-low-count">0</span>
+              <span class="metric-card-sub">At or below minimum threshold</span>
+            </div>
+            <div class="metric-card rose">
+              <span class="metric-card-label">Out of Stock</span>
+              <span class="metric-card-value" id="stock-metric-out-count">0</span>
+              <span class="metric-card-sub">Zero available quantity</span>
+            </div>
+          </div>
+
+          <!-- Filters -->
+          <div class="filter-bar">
+            <div class="form-group-inline" style="flex-grow: 2;">
+              <label for="stock-search">Search Inventory</label>
+              <input type="text" id="stock-search" placeholder="Search by Item Code, Name, Brand, Model...">
+            </div>
+            <div class="form-group-inline">
+              <label for="stock-filter-category">Category</label>
+              <select id="stock-filter-category">
+                <option value="All">All Categories</option>
+                <option value="CPU">CPU / Processor</option>
+                <option value="Motherboard">Motherboard</option>
+                <option value="RAM">RAM / Memory</option>
+                <option value="Storage">Storage (SSD / HDD)</option>
+                <option value="GPU">GPU / Graphics Card</option>
+                <option value="PSU">Power Supply (PSU)</option>
+                <option value="Cabinet">Cabinet / Case</option>
+                <option value="Cooler">Cooler / Fan</option>
+                <option value="Laptop">Laptop / Notebook</option>
+                <option value="Finished PC">Finished PC / Prebuilt</option>
+                <option value="Monitor">Monitor / Display</option>
+                <option value="Accessory">Accessories & Peripherals</option>
+                <option value="Spare Part">Spare Part / Component</option>
+              </select>
+            </div>
+            <div class="form-group-inline">
+              <label for="stock-filter-status">Status</label>
+              <select id="stock-filter-status">
+                <option value="All">All Statuses</option>
+                <option value="Available">Available</option>
+                <option value="Low Stock">Low Stock</option>
+                <option value="Out of Stock">Out of Stock</option>
+              </select>
+            </div>
+            <button class="btn btn-secondary" id="reset-stock-filters-btn" style="height: 42px;">Reset</button>
+          </div>
+
+          <!-- Stock Table -->
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Item Code</th>
+                  <th>Item Name</th>
+                  <th>Category</th>
+                  <th>Brand / Model</th>
+                  <th style="text-align: center;">Purchase Qty</th>
+                  <th style="text-align: center;">Sales Qty</th>
+                  <th style="text-align: center;">Available Stock</th>
+                  <th>Purchase Rate</th>
+                  <th>Selling Rate</th>
+                  <th>Stock Value</th>
+                  <th style="text-align: center;">Min Stock</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="inventory-table-body">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ==================== PC BUILD / ASSEMBLY VIEW ==================== -->
+        <section id="pcbuilder-section" class="page-section">
+          <div class="section-header">
+            <div class="section-header-left">
+              <h3>PC Build & Assembly Module</h3>
+              <p>Configure custom PC rigs. Components stock automatically reduces and finished PC is added to stock with accurate build costing.</p>
+            </div>
+          </div>
+
+          <!-- Tabs -->
+          <div class="sub-nav-tabs">
+            <button class="sub-tab-btn active" data-pc-tab="configurator">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>
+              PC Assembly Configurator
+            </button>
+            <button class="sub-tab-btn" data-pc-tab="history">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Assembled PC Builds History
+            </button>
+          </div>
+
+          <!-- TAB 1: Configurator -->
+          <div id="pc-tab-configurator" class="sub-tab-pane active">
+            <form id="pc-builder-form">
+              <div class="pc-builder-container">
+                <!-- Left: Component Selection Slots -->
+                <div>
+                  <div class="dashboard-card" style="margin-bottom: 1.5rem;">
+                    <h4 style="margin-bottom: 1rem; color: var(--primary);">1. Build & Customer Information</h4>
+                    <div class="form-grid-3">
+                      <div class="form-group">
+                        <label for="pc-build-name">Build Model / Name *</label>
+                        <input type="text" id="pc-build-name" required placeholder="e.g. Ryzen 7 RTX 4070 Gaming Beast">
+                      </div>
+                      <div class="form-group">
+                        <label for="pc-build-serial">Finished PC Serial / Tag No. *</label>
+                        <input type="text" id="pc-build-serial" required placeholder="e.g. BIOS-PC-2026-001">
+                      </div>
+                      <div class="form-group">
+                        <label for="pc-build-date">Assembly Date *</label>
+                        <input type="date" id="pc-build-date" required>
+                      </div>
+                    </div>
+
+                    <div style="margin-top: 1rem; border-top: 1px dashed var(--border); padding-top: 0.85rem;">
+                      <h5 style="margin-bottom: 0.65rem; color: var(--primary); font-size: 0.875rem;">Customer Details (Saved with Build)</h5>
+                      <div class="form-grid">
+                        <div class="form-group">
+                          <label for="pc-customer-name">Customer Name *</label>
+                          <input type="text" id="pc-customer-name" required placeholder="Customer Full Name" list="pc-customer-suggestions">
+                          <datalist id="pc-customer-suggestions"></datalist>
+                        </div>
+                        <div class="form-group">
+                          <label for="pc-customer-phone">Phone Number *</label>
+                          <input type="tel" id="pc-customer-phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+                        </div>
+                      </div>
+                      <div class="form-grid" style="margin-top: 0.5rem;">
+                        <div class="form-group">
+                          <label for="pc-customer-address">Address (Optional)</label>
+                          <input type="text" id="pc-customer-address" placeholder="Customer address / location">
+                        </div>
+                        <div class="form-group">
+                          <label for="pc-customer-gst">GST Number (Optional)</label>
+                          <input type="text" id="pc-customer-gst" placeholder="e.g. 29AAAAA0000A1Z5" style="text-transform: uppercase;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dashboard-card">
+                    <h4 style="margin-bottom: 1rem; color: var(--primary);">2. Select Components from Stock</h4>
+                    
+                    <!-- CPU Slot -->
+                    <div class="component-slot-card">
+                      <div class="component-slot-header">
+                        <div class="component-slot-title">
+                          <span class="badge badge-category">CPU</span> Processor *
+                        </div>
+                        <span class="component-price-badge" id="slot-cpu-cost">₹0.00</span>
+                      </div>
+                      <select id="pc-slot-cpu" required class="pc-component-select">
+                        <option value="">-- Choose CPU from Stock --</option>
+                      </select>
+                    </div>
+
+                    <!-- Motherboard Slot -->
+                    <div class="component-slot-card">
+                      <div class="component-slot-header">
+                        <div class="component-slot-title">
+                          <span class="badge badge-category">Motherboard</span> Motherboard *
+                        </div>
+                        <span class="component-price-badge" id="slot-motherboard-cost">₹0.00</span>
+                      </div>
+                      <select id="pc-slot-motherboard" required class="pc-component-select">
+                        <option value="">-- Choose Motherboard from Stock --</option>
+                      </select>
+                    </div>
+
+                    <!-- RAM Slot -->
+                    <div class="component-slot-card">
+                      <div class="component-slot-header">
+                        <div class="component-slot-title">
+                          <span class="badge badge-category">RAM</span> Memory (RAM) *
+                        </div>
+                        <span class="component-price-badge" id="slot-ram-cost">₹0.00</span>
+                      </div>
+                      <div class="form-grid" style="grid-template-columns: 3fr 1fr; gap: 0.5rem;">
+                        <select id="pc-slot-ram" required class="pc-component-select">
+                          <option value="">-- Choose RAM Module from Stock --</option>
+                        </select>
+                        <select id="pc-slot-ram-qty" title="Quantity of Sticks">
+                          <option value="1">1 Stick</option>
+                          <option value="2">2 Sticks (Dual Ch)</option>
+                          <option value="4">4 Sticks (Quad Ch)</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Storage SSD Slot -->
+                    <div class="component-slot-card">
+                      <div class="component-slot-header">
+                        <div class="component-slot-title">
+                          <span class="badge badge-category">Storage</span> Primary Storage (SSD/NVMe) *
+                        </div>
+                        <span class="component-price-badge" id="slot-storage-cost">₹0.00</span>
+                      </div>
+                      <select id="pc-slot-storage" required class="pc-component-select">
+                        <option value="">-- Choose SSD / NVMe from Stock --</option>
+                      </select>
+                    </div>
+
+                    <!-- GPU Slot -->
+                    <div class="component-slot-card">
+                      <div class="component-slot-header">
+                        <div class="component-slot-title">
+                          <span class="badge badge-category">GPU</span> Graphics Card (GPU) (Optional)
+                        </div>
+                        <span class="component-price-badge" id="slot-gpu-cost">₹0.00</span>
+                      </div>
+                      <select id="pc-slot-gpu" class="pc-component-select">
+                        <option value="">-- No Dedicated GPU (Integrated Graphics) --</option>
+                      </select>
+                    </div>
+
+                    <!-- PSU Slot -->
+                    <div class="component-slot-card">
+                      <div class="component-slot-header">
+                        <div class="component-slot-title">
+                          <span class="badge badge-category">PSU</span> Power Supply Unit *
+                        </div>
+                        <span class="component-price-badge" id="slot-psu-cost">₹0.00</span>
+                      </div>
+                      <select id="pc-slot-psu" required class="pc-component-select">
+                        <option value="">-- Choose Power Supply from Stock --</option>
+                      </select>
+                    </div>
+
+                    <!-- Cabinet Slot -->
+                    <div class="component-slot-card">
+                      <div class="component-slot-header">
+                        <div class="component-slot-title">
+                          <span class="badge badge-category">Cabinet</span> PC Case / Cabinet *
+                        </div>
+                        <span class="component-price-badge" id="slot-cabinet-cost">₹0.00</span>
+                      </div>
+                      <select id="pc-slot-cabinet" required class="pc-component-select">
+                        <option value="">-- Choose Cabinet from Stock --</option>
+                      </select>
+                    </div>
+
+                    <!-- Cooler Slot -->
+                    <div class="component-slot-card">
+                      <div class="component-slot-header">
+                        <div class="component-slot-title">
+                          <span class="badge badge-category">Cooler</span> CPU Cooler / AIO *
+                        </div>
+                        <span class="component-price-badge" id="slot-cooler-cost">₹0.00</span>
+                      </div>
+                      <select id="pc-slot-cooler" required class="pc-component-select">
+                        <option value="">-- Choose Cooler from Stock --</option>
+                      </select>
+                    </div>
+
+                    <!-- Extra Component Slot -->
+                    <div class="component-slot-card">
+                      <div class="component-slot-header">
+                        <div class="component-slot-title">
+                          <span class="badge badge-category">Extra</span> Secondary Storage / Fans / Accessory (Optional)
+                        </div>
+                        <span class="component-price-badge" id="slot-extra-cost">₹0.00</span>
+                      </div>
+                      <select id="pc-slot-extra" class="pc-component-select">
+                        <option value="">-- None / Optional --</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right: Sticky Live Build Cost & Pricing Calculation Widget -->
+                <div>
+                  <div class="build-summary-card">
+                    <h4>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                      PC Build Cost & Pricing
+                    </h4>
+
+                    <div class="build-item-list" id="pc-build-items-summary">
+                      <div class="no-data-msg" style="padding: 0.5rem 0 !important; font-size: 0.85rem;">
+                        Select components above to preview cost breakdown.
+                      </div>
+                    </div>
+
+                    <div class="build-summary-totals">
+                      <div class="total-row">
+                        <span>Sum of Component Costs:</span>
+                        <strong id="pc-calc-components-cost">₹0.00</strong>
+                      </div>
+                      <div class="form-group" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                        <label for="pc-labor-cost" style="font-size: 0.8rem;">Assembly & Testing Labor (₹):</label>
+                        <input type="number" id="pc-labor-cost" min="0" step="100" value="1500" style="padding: 0.4rem 0.6rem;">
+                      </div>
+                      <div class="total-row grand-total">
+                        <span>Total PC Build Cost:</span>
+                        <span id="pc-calc-total-cost">₹0.00</span>
+                      </div>
+
+                      <div class="form-group" style="margin-top: 0.5rem; margin-bottom: 0.25rem;">
+                        <label for="pc-selling-price" style="font-size: 0.8rem; font-weight: 700; color: var(--primary);">Target Selling Price (₹) *:</label>
+                        <input type="number" id="pc-selling-price" required min="0" step="100" placeholder="e.g. 75000" style="font-weight: 700; color: var(--primary);">
+                      </div>
+
+                      <div class="selling-recommendation">
+                        <span>Estimated Profit Margin:</span>
+                        <span id="pc-calc-margin">₹0.00 (0%)</span>
+                      </div>
+
+                      <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 100%; padding: 0.85rem;" id="assemble-pc-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        Assemble & Add to Stock
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- TAB 2: Builds History -->
+          <div id="pc-tab-history" class="sub-tab-pane">
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Build ID / Tag</th>
+                    <th>Build Date</th>
+                    <th>Customer Details</th>
+                    <th>PC Model Name</th>
+                    <th>Components Breakdown</th>
+                    <th>Total Cost (₹)</th>
+                    <th>Selling Price (₹)</th>
+                    <th>Margin</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="pc-history-table-body">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== RETURNS & SUPPLIERS VIEW ==================== -->
+        <section id="returns-section" class="page-section">
+          <div class="section-header">
+            <div class="section-header-left">
+              <h3>Returns, Suppliers & Stock Movements</h3>
+              <p>Manage Sales Returns (restocks item), Purchase Returns (deducts stock), Suppliers directory, and full stock ledger audit trail.</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button class="btn btn-primary" id="open-purchase-return-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                + Purchase Return
+              </button>
+              <button class="btn btn-success" id="open-sales-return-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                + Sales Return
+              </button>
+            </div>
+          </div>
+
+          <!-- Sub Tabs -->
+          <div class="sub-nav-tabs">
+            <button class="sub-tab-btn active" data-returns-tab="sales-returns">Sales Returns</button>
+            <button class="sub-tab-btn" data-returns-tab="purchase-returns">Purchase Returns</button>
+            <button class="sub-tab-btn" data-returns-tab="suppliers">Suppliers Directory</button>
+            <button class="sub-tab-btn" data-returns-tab="ledger">Comprehensive Stock Ledger</button>
+          </div>
+
+          <!-- Tab 1: Sales Returns -->
+          <div id="returns-tab-sales-returns" class="sub-tab-pane active">
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Return ID</th>
+                    <th>Date</th>
+                    <th>Sales Inv #</th>
+                    <th>Customer Name</th>
+                    <th>Item Code & Name</th>
+                    <th style="text-align: center;">Returned Qty</th>
+                    <th>Refund / Credit (₹)</th>
+                    <th>Reason</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="sales-returns-table-body">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tab 2: Purchase Returns -->
+          <div id="returns-tab-purchase-returns" class="sub-tab-pane">
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Return ID</th>
+                    <th>Date</th>
+                    <th>Purchase Inv #</th>
+                    <th>Supplier Name</th>
+                    <th>Item Code & Name</th>
+                    <th style="text-align: center;">Returned Qty</th>
+                    <th>Debit Amount (₹)</th>
+                    <th>Reason</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="purchase-returns-table-body">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tab 3: Suppliers Directory -->
+          <div id="returns-tab-suppliers" class="sub-tab-pane">
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Supplier Name</th>
+                    <th>Contact Phone</th>
+                    <th>Email</th>
+                    <th>GSTIN</th>
+                    <th>Total Purchases</th>
+                    <th>Outstanding Dues</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="suppliers-table-body">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tab 4: Comprehensive Stock Ledger -->
+          <div id="returns-tab-ledger" class="sub-tab-pane">
+            <div class="filter-bar" style="margin-bottom: 1rem;">
+              <div class="form-group-inline" style="flex-grow: 2;">
+                <label for="ledger-search">Search Ledger</label>
+                <input type="text" id="ledger-search" placeholder="Search by Item Code, Name, Ref Doc #, Type...">
+              </div>
+              <div class="form-group-inline">
+                <label for="ledger-filter-type">Movement Type</label>
+                <select id="ledger-filter-type">
+                  <option value="All">All Types</option>
+                  <option value="PURCHASE">Purchase (+)</option>
+                  <option value="SALE">Sale / Invoice (-)</option>
+                  <option value="SALES_RETURN">Sales Return (+)</option>
+                  <option value="PURCHASE_RETURN">Purchase Return (-)</option>
+                  <option value="PC_BUILD_CONSUME">PC Build Consumed (-)</option>
+                  <option value="PC_BUILD_PRODUCE">PC Build Produced (+)</option>
+                  <option value="ADJUSTMENT">Stock Adjustment (±)</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date & Time</th>
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>Type</th>
+                    <th>Ref Doc #</th>
+                    <th style="text-align: right;">In Qty (+)</th>
+                    <th style="text-align: right;">Out Qty (-)</th>
+                    <th style="text-align: right;">Balance Stock</th>
+                    <th>Unit Cost</th>
+                    <th>Remarks</th>
+                  </tr>
+                </thead>
+                <tbody id="stock-ledger-table-body">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ==================== FINANCE & P&L VIEW (ADDED - EXISTING MODULES UNCHANGED) ==================== -->
+        <section id="finance-section" class="page-section">
+          <div class="section-header">
+            <div class="section-header-left">
+              <h3>Finance & Profit / Loss</h3>
+              <p>Track revenue, outside services, other income, company expenses, cash collection and real business profit without changing your existing billing workflow.</p>
+            </div>
+            <div class="finance-action-row">
+              <button class="btn btn-danger" id="finance-add-expense-btn">+ Add Expense</button>
+              <button class="btn btn-success" id="finance-add-income-btn">+ Other Income</button>
+              <button class="btn btn-primary" id="finance-add-outside-btn">+ Outside Service Cost</button>
+            </div>
+          </div>
+
+          <div class="finance-control-card">
+            <div class="finance-period-tabs">
+              <button class="finance-period-btn active" data-finance-period="month">This Month</button>
+              <button class="finance-period-btn" data-finance-period="year">This Year</button>
+              <button class="finance-period-btn" data-finance-period="all">All Time</button>
+              <button class="finance-period-btn" data-finance-period="custom">Custom</button>
+            </div>
+            <div class="finance-custom-dates" id="finance-custom-dates" style="display:none;">
+              <label>From <input type="date" id="finance-from-date"></label>
+              <label>To <input type="date" id="finance-to-date"></label>
+              <button class="btn btn-secondary btn-sm" id="finance-apply-date-btn">Apply</button>
+            </div>
+          </div>
+
+          <div class="finance-kpi-grid">
+            <div class="finance-kpi revenue"><span>Revenue</span><strong id="fin-revenue">₹0</strong><small id="fin-revenue-note">Sales + Service</small></div>
+            <div class="finance-kpi cogs"><span>Direct Cost / COGS</span><strong id="fin-cogs">₹0</strong><small>Cost of sold goods + direct service cost</small></div>
+            <div class="finance-kpi gross"><span>Gross Profit</span><strong id="fin-gross-profit">₹0</strong><small id="fin-gross-margin">0% margin</small></div>
+            <div class="finance-kpi expense"><span>Operating Expenses</span><strong id="fin-expenses">₹0</strong><small>Company expenses entered here</small></div>
+            <div class="finance-kpi profit"><span>Net Profit / Loss</span><strong id="fin-net-profit">₹0</strong><small id="fin-net-margin">0% net margin</small></div>
+            <div class="finance-kpi cash"><span>Cash / Payments Collected</span><strong id="fin-cash-collected">₹0</strong><small id="fin-outstanding">Outstanding: ₹0</small></div>
+          </div>
+
+          <div class="finance-kpi-grid" style="margin-top:1rem;">
+            <div class="finance-kpi" style="border-left:3px solid var(--primary);"><span>Service Labour</span><strong id="fin-service-labour">₹0</strong><small>Billing amount • GST included</small></div>
+            <div class="finance-kpi" style="border-left:3px solid var(--primary);"><span>Service Parts</span><strong id="fin-service-parts">₹0</strong><small>Customer billing • GST included</small></div>
+            <div class="finance-kpi" style="border-left:3px solid var(--warning);"><span>Service Parts Cost</span><strong id="fin-parts-cost">₹0</strong><small>Actual stock cost used in service</small></div>
+            <div class="finance-kpi" style="border-left:3px solid var(--success);"><span>Parts Profit</span><strong id="fin-parts-profit">₹0</strong><small>Parts billing less actual stock cost</small></div>
+            <div class="finance-kpi" style="border-left:3px solid var(--success);"><span>Labour Profit</span><strong id="fin-labour-profit">₹0</strong><small>Labour billing less direct labour cost</small></div>
+            <div class="finance-kpi" style="border-left:3px solid var(--info);"><span>Total Purchases (GST)</span><strong id="fin-purchases">₹0</strong><small>Full purchase invoice value including GST</small></div>
+          </div>
+
+          <div class="finance-two-col">
+            <div class="finance-panel cash-flow-panel">
+              <div class="finance-panel-head"><div><h4>💰 Current Cash in Hand</h4><p>Actual money movement — purchases are deducted by paid amount</p></div></div>
+              <div class="cash-flow-grid">
+                <div><span>Opening Cash</span><strong id="cash-opening">₹0</strong></div>
+                <div><span>Sales Collected</span><strong id="cash-sales">₹0</strong></div>
+                <div><span>Service Collected</span><strong id="cash-service">₹0</strong></div>
+                <div><span>Other Income Received</span><strong id="cash-other-income">₹0</strong></div>
+                <div class="out"><span>Purchase Payments</span><strong id="cash-purchases">₹0</strong></div>
+                <div class="out"><span>Expenses Paid</span><strong id="cash-expenses">₹0</strong></div>
+                <div class="out"><span>Outside Service Paid</span><strong id="cash-outside">₹0</strong></div>
+                <div class="cash-total"><span>Current Cash in Hand</span><strong id="cash-current">₹0</strong></div>
+              </div>
+              <div class="cash-flow-note" id="cash-flow-note">Set your opening cash to make the balance match your actual company cash.</div>
+              <div style="display:flex;gap:.5rem;margin-top:.75rem;flex-wrap:wrap;">
+                <button class="btn btn-secondary btn-sm" id="finance-set-opening-cash-btn">Set Opening Cash</button>
+              </div>
+            </div>
+            <div class="finance-panel">
+              <div class="finance-panel-head"><div><h4>📦 Purchase & Supplier Position</h4><p>Purchase value is GST-inclusive; only paid amount affects cash</p></div></div>
+              <div class="cash-flow-grid purchase-position">
+                <div><span>Total Purchase Value</span><strong id="fin-purchase-total">₹0</strong></div>
+                <div><span>Purchase GST</span><strong id="fin-purchase-gst">₹0</strong></div>
+                <div><span>Purchase Paid</span><strong id="fin-purchase-paid">₹0</strong></div>
+                <div class="out"><span>Supplier Payable</span><strong id="fin-purchase-payable">₹0</strong></div>
+              </div>
+              <div class="cash-flow-note">Purchase total is not directly treated as P&L expense. Unsold stock remains inventory; sold/used stock goes to the relevant cost category.</div>
+            </div>
+          </div>
+
+          <div class="finance-two-col">
+            <div class="finance-panel">
+              <div class="finance-panel-head"><div><h4>Profit & Loss Statement</h4><p id="finance-pnl-period-label">Current period</p></div></div>
+              <div class="finance-pnl">
+                <div class="pnl-row main"><span>Product / Sales Revenue</span><strong id="pnl-sales">₹0</strong></div>
+                <div class="pnl-row main"><span>Service Invoice Revenue</span><strong id="pnl-service">₹0</strong></div>
+                <div class="pnl-row main"><span>Outsourced Service Cost</span><strong id="pnl-outside">₹0</strong></div>
+                <div class="pnl-row sub"><span>Less: Sales Returns / Refunds</span><strong id="pnl-returns">₹0</strong></div>
+                <div class="pnl-row total"><span>Net Operating Revenue</span><strong id="pnl-net-revenue">₹0</strong></div>
+                <div class="pnl-row sub"><span>Less: Cost of Goods Sold (Product COGS)</span><strong id="pnl-product-cogs">₹0</strong></div>
+                <div class="pnl-row sub"><span>Less: Service Parts Cost</span><strong id="pnl-service-parts-cogs">₹0</strong></div>
+                <div class="pnl-row sub"><span>Less: Outside Vendor Cost</span><strong id="pnl-direct-service-cost">₹0</strong></div>
+                <div class="pnl-row total"><span>Gross Profit</span><strong id="pnl-gross">₹0</strong></div>
+                <div class="pnl-row main"><span>Other Income</span><strong id="pnl-other-income">₹0</strong></div>
+                <div class="pnl-row sub"><span>Less: Operating Expenses</span><strong id="pnl-operating-expense">₹0</strong></div>
+                <div class="pnl-row grand"><span>NET PROFIT / LOSS</span><strong id="pnl-net">₹0</strong></div>
+              </div>
+            </div>
+
+            <div class="finance-panel">
+              <div class="finance-panel-head"><div><h4>Revenue Sources</h4><p>Where the selected period's money is coming from</p></div></div>
+              <div id="finance-source-breakdown" class="finance-source-list"></div>
+              <div class="finance-mini-summary">
+                <div><span>Invoices</span><strong id="fin-invoice-count">0</strong></div>
+                <div><span>Outside Service Costs</span><strong id="fin-outside-count">0</strong></div>
+                <div><span>Expenses</span><strong id="fin-expense-count">0</strong></div>
+                <div><span>Other Income</span><strong id="fin-income-count">0</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="finance-panel finance-trend-panel">
+            <div class="finance-panel-head">
+              <div><h4>Monthly Business Performance</h4><p>Revenue, expenses and net profit by month</p></div>
+            </div>
+            <div class="table-responsive">
+              <table>
+                <thead><tr><th>Month</th><th>Sales</th><th>Service</th><th>Outside Vendor Cost</th><th>Other Income</th><th>Total Revenue</th><th>COGS</th><th>Expenses</th><th>Net Profit / Loss</th></tr></thead>
+                <tbody id="finance-monthly-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="finance-panel">
+            <div class="finance-panel-head">
+              <div><h4>Finance Ledger</h4><p>Company expenses, outsourced service costs and other income</p></div>
+              <input class="finance-ledger-search" id="finance-ledger-search" placeholder="Search description / category / reference...">
+            </div>
+            <div class="table-responsive">
+              <table>
+                <thead><tr><th>Date</th><th>Type</th><th>Description</th><th>Category</th><th>Reference</th><th>Amount</th><th>Direct Cost</th><th>Actions</th></tr></thead>
+                <tbody id="finance-ledger-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== REPORTS VIEW ==================== -->
+        <section id="reports-section" class="page-section">
+          <div class="section-header">
+            <div class="section-header-left">
+              <h3>Reports Center</h3>
+              <p>Query aggregated business data, audit inventory movements, and export customized reports to Excel.</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button class="btn btn-secondary" id="print-report-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                Print Report
+              </button>
+              <button class="btn btn-success" id="export-excel-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download Excel Report
+              </button>
+            </div>
+          </div>
+
+          <!-- Filters -->
+          <div class="filter-bar">
+            <div class="form-group-inline" style="flex-grow: 1.5;">
+              <label for="report-filter-module">Report Content</label>
+              <select id="report-filter-module">
+                <optgroup label="Financial Reports">
+                  <option value="FinanceSummary">Financial Summary / P&amp;L</option>
+                  <option value="FinanceTrend">Monthly Revenue &amp; Profit</option>
+                  <option value="FinanceLedger">Finance Ledger</option>
+                  <option value="FinanceExpenses">Company Expenses</option>
+                  <option value="FinanceOutside">Outside Service Costs</option>
+                  <option value="FinanceIncome">Other Income</option>
+                  <option value="FinanceServiceBreakdown">Service Labour &amp; Parts Profit</option>
+                </optgroup>
+                <optgroup label="Core Business Reports">
+                  <option value="Enquiries">Enquiries Report</option>
+                  <option value="Bookings">Bookings Report</option>
+                  <option value="Billings">Billings / Sales Report</option>
+                </optgroup>
+                <optgroup label="Purchase & Inventory Reports">
+                  <option value="Purchases">Purchase Report</option>
+                  <option value="StockAvailability">Stock Availability Report</option>
+                  <option value="StockMovement">Stock Movement / Ledger Report</option>
+                  <option value="LowStock">Low Stock Report</option>
+                  <option value="OutOfStock">Out of Stock Report</option>
+                  <option value="SupplierPurchase">Supplier Purchase Report</option>
+                  <option value="PurchaseReturns">Purchase Return Report</option>
+                  <option value="SalesStock">Sales / Invoice Stock Report</option>
+                  <option value="PCBuilds">PC Build Assembly Report</option>
+                  <option value="ProfitMargin">Profit / Margin Report</option>
+                </optgroup>
+                <optgroup label="Service & Repair Reports">
+                  <option value="ServiceJobCards">Service Job Cards Report</option>
+                  <option value="ServiceInvoices">Service Invoices & Payments Report</option>
+                  <option value="ServiceParts">Service Parts Consumption Report</option>
+                  <option value="ServiceEstimations">Service Estimations Report</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group-inline" style="flex-grow: 1;">
+              <label for="report-search-input">Search / Filter Keyword</label>
+              <input type="text" id="report-search-input" placeholder="Search by item, name, ref #...">
+            </div>
+            <div class="form-group-inline">
+              <label for="report-from-date">From Date</label>
+              <input type="date" id="report-from-date">
+            </div>
+            <div class="form-group-inline">
+              <label for="report-to-date">To Date</label>
+              <input type="date" id="report-to-date">
+            </div>
+            <button class="btn btn-secondary" id="reset-report-filters-btn" style="height: 42px;">
+              Reset Filters
+            </button>
+          </div>
+
+          <!-- Dynamic Report Table Container -->
+          <div class="table-responsive" id="report-print-container">
+            <div id="report-print-header" style="display: none; padding: 1.25rem 1.5rem 0.75rem; border-bottom: 2px solid var(--border);">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <div class="print-brand-header" style="margin-bottom: 0;">
+                  <img src="assets/bios-logo-transparent.png" alt="BIOS Official Logo" class="print-brand-logo brand-logo-img" />
+                  <div class="print-brand-info">
+                    <h2>BIOS</h2>
+                    <div class="print-brand-tagline">BUILDING INTELLIGENT OUTCOMES WITH SOLUTION</div>
+                    <div class="print-brand-desc">Enterprise PC, Laptop & Billing Management Suite</div>
+                  </div>
+                </div>
+                <div style="text-align: right; font-size: 0.78rem; color: #475569; line-height: 1.4;">
+                  <div style="font-weight: 700; color: #0f172a;">BIOS Technologies</div>
+                  <div>GSTIN: #NA</div>
+                  <div>Phone: +91 8884481178 & 7676988838 | biosgroupofcompany@gmail.com</div>
+                </div>
+              </div>
+              <h3 id="report-print-title" style="margin-bottom: 0.25rem; font-size: 1.25rem; color: #0f172a;">BIOS Report</h3>
+              <p id="report-print-subtitle" style="font-size: 0.85rem; color: var(--text-muted); margin: 0;"></p>
+            </div>
+            <table id="report-table">
+              <thead id="report-table-head">
+                <!-- Loaded based on module selection -->
+              </thead>
+              <tbody id="report-table-body">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        BIOS - Building Intelligent Outcomes with Solutions | PC, Laptop & Inventory Billing Suite
+      </footer>
     </div>
-    <span class="form-live-dot"><i></i> ONLINE</span>
   </div>
- <div class="google-form-wrap">
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfW8HwJjmHwjG2VfulG86lKuN-Z4fzYWlf_0Tspg243YRioOg/viewform?embedded=true"
-       target="_blank"
-       rel="noopener"
-       title="BIOS Quick Enquiry Form">
+  <!-- ==================== MODALS ==================== -->
 
-        <img src="assets/google form.png"
-             alt="Click Here To Open Google Form"
-             loading="lazy">
+  <!-- 1. ENQUIRY MODAL (ADD / EDIT) -->
+  <div class="modal-overlay" id="enquiry-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="enquiry-modal-title">Add Enquiry</h4>
+        <button class="modal-close-btn" id="close-enquiry-modal-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="enquiry-form">
+        <input type="hidden" id="enquiry-edit-id">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="enquiry-name">Customer Name *</label>
+            <input type="text" id="enquiry-name" required placeholder="Enter full name">
+          </div>
+          <div class="form-group">
+            <label for="enquiry-mobile">Mobile Number *</label>
+            <input type="tel" id="enquiry-mobile" required pattern="[0-9]{10}" placeholder="Enter 10-digit mobile number">
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="enquiry-date">Enquiry Date *</label>
+              <input type="date" id="enquiry-date" required>
+            </div>
+            <div class="form-group">
+              <label for="enquiry-source">Source *</label>
+              <select id="enquiry-source" required>
+                <option value="" disabled selected>Select Source</option>
+                <option value="Walking">Walking</option>
+                <option value="Referral">Referral</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="enquiry-status">Status *</label>
+            <select id="enquiry-status" required>
+              <option value="New">New</option>
+              <option value="Follow Up">Follow Up</option>
+              <option value="Booking">Booking</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="cancel-enquiry-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="save-enquiry-btn">Save Enquiry</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-    </a>
+  <!-- 2. BOOKING MODAL (ADD / EDIT) -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="booking-modal-title">New Booking</h4>
+        <button class="modal-close-btn" id="close-booking-modal-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="booking-form">
+        <input type="hidden" id="booking-edit-id">
+        <!-- If converted from Enquiry, link it -->
+        <input type="hidden" id="booking-enquiry-link-id">
+        
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="booking-name">Customer Name *</label>
+            <!-- Input text to search existing or type new -->
+            <input type="text" id="booking-name" required placeholder="Enter full name" list="booking-customer-suggestions">
+            <datalist id="booking-customer-suggestions">
+              <!-- Dynamically populated from Enquiries for quick autocompletion -->
+            </datalist>
+          </div>
+          <div class="form-group">
+            <label for="booking-mobile">Mobile Number (Editable)</label>
+            <input type="tel" id="booking-mobile" placeholder="E.g., 9876543210">
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="booking-date">Booking Date *</label>
+              <input type="date" id="booking-date" required>
+            </div>
+            <div class="form-group">
+              <label for="booking-amount">Booking Amount (₹) *</label>
+              <input type="number" id="booking-amount" min="0" step="0.01" required placeholder="0.00">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="booking-payment">Payment Method *</label>
+            <select id="booking-payment" required>
+              <option value="" disabled selected>Select Payment Method</option>
+              <option value="Cash">Cash</option>
+              <option value="UPI">UPI</option>
+              <option value="Card">Card</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="cancel-booking-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="save-booking-btn">Confirm Booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-</div>
+  <!-- 3. BILLING MODAL (GENERATE INVOICE + STOCK INTEGRATION) -->
+  <div class="modal-overlay" id="billing-modal-form">
+    <div class="modal-content modal-lg">
+      <div class="modal-header">
+        <h4>Generate Sales Invoice</h4>
+        <button class="modal-close-btn" id="close-billing-form-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="billing-form-el">
+        <div class="modal-body">
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label for="billing-invoice-no">Invoice Number (Auto)</label>
+              <input type="text" id="billing-invoice-no" readonly style="background-color: var(--secondary-light); font-weight: 700;">
+            </div>
+            <div class="form-group">
+              <label for="billing-date">Invoice Date *</label>
+              <input type="date" id="billing-date" required>
+            </div>
+            <div class="form-group">
+              <label for="billing-booking-select">Select Confirmed Booking (Optional)</label>
+              <select id="billing-booking-select">
+                <option value="">-- Choose confirmed booking --</option>
+              </select>
+            </div>
+          </div>
+          
+          <div style="margin: 0.75rem 0; border-top: 1px solid var(--border); padding-top: 0.75rem;">
+            <h5 style="margin-bottom: 0.5rem; color: var(--primary);">Customer Information</h5>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="billing-customer-name">Customer Name *</label>
+                <input type="text" id="billing-customer-name" required placeholder="Customer Full Name" list="billing-customer-suggestions">
+                <datalist id="billing-customer-suggestions"></datalist>
+              </div>
+              <div class="form-group">
+                <label for="billing-customer-mobile">Phone Number *</label>
+                <input type="tel" id="billing-customer-mobile" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+              </div>
+            </div>
+            <div class="form-grid" style="margin-top: 0.5rem;">
+              <div class="form-group">
+                <label for="billing-customer-address">Address (Optional)</label>
+                <input type="text" id="billing-customer-address" placeholder="Door No, Street, City, Pincode">
+              </div>
+              <div class="form-group">
+                <label for="billing-customer-gst">GST Number (Optional)</label>
+                <input type="text" id="billing-customer-gst" placeholder="e.g. 29AAAAA0000A1Z5" style="text-transform: uppercase;">
+              </div>
+            </div>
+          </div>
 
-<a class="form-open-link"
-   href="https://docs.google.com/forms/d/e/1FAIpQLSfW8HwJjmHwjG2VfulG86lKuN-Z4fzYWlf_0Tspg243YRioOg/viewform?usp=publish-editor"
-   target="_blank"
-   rel="noopener">
+          <div style="margin: 0.75rem 0; border-top: 1px solid var(--border); padding-top: 0.75rem;">
+            <h5 style="margin-bottom: 0.5rem; color: var(--primary);">Item / Stock Selection</h5>
+            <div class="form-group">
+              <label for="billing-inventory-select">Select Product from Stock (Auto-populates & reduces stock)</label>
+              <select id="billing-inventory-select">
+                <option value="">-- Select from Inventory (or enter custom product below) --</option>
+              </select>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="billing-product-name">Product / Service Name *</label>
+                <input type="text" id="billing-product-name" required placeholder="E.g., ASUS ROG Strix Gaming Laptop">
+              </div>
+              <div class="form-group">
+                <label for="billing-serial-no">Serial Number (Optional)</label>
+                <input type="text" id="billing-serial-no" placeholder="e.g. SN-89482749">
+              </div>
+            </div>
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="billing-qty">Quantity *</label>
+                <input type="number" id="billing-qty" min="1" step="1" value="1" required>
+              </div>
+              <div class="form-group">
+                <label for="billing-amount">Base Unit Rate (₹) *</label>
+                <input type="number" id="billing-amount" min="0" step="0.01" required placeholder="0.00">
+              </div>
+              <div class="form-group">
+                <label for="billing-gst">GST Calculation *</label>
+                <select id="billing-gst" style="background-color: var(--secondary-light); font-weight: 600;">
+                  <option value="18">18% GST (Standard)</option>
+                  <option value="12">12% GST</option>
+                  <option value="28">28% GST</option>
+                  <option value="5">5% GST</option>
+                  <option value="0">0% (Nil / Exempted)</option>
+                </select>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 1.5rem; margin-top: 0.75rem; font-size: 0.9rem; font-weight: 600; background: var(--bg-main); padding: 0.75rem; border-radius: var(--radius-md);">
+              <div>Subtotal: <span id="billing-calc-subtotal">₹0.00</span></div>
+              <div>GST Amount: <span id="billing-calc-gst">₹0.00</span></div>
+              <div style="color: var(--primary); font-size: 1.05rem;">Grand Total: <span id="billing-calc-total">₹0.00</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="cancel-billing-btn-el">Cancel</button>
+          <button type="submit" class="btn btn-primary">Generate Invoice & Deduct Stock</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-    Open form in new tab <b>↗</b>
+  <!-- 4. INVOICE VIEW & PRINT PREVIEW MODAL -->
+  <div class="modal-overlay" id="invoice-modal">
+    <div class="modal-content invoice-modal">
+      <div class="modal-header">
+        <h4>Invoice Print Preview</h4>
+        <button class="modal-close-btn" id="close-invoice-preview-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" style="background-color: #f1f5f9;">
+        
+        <!-- Document Print Area -->
+        <div class="invoice-preview-card" id="invoice-print-area">
+          <div class="invoice-header-row">
+            <div class="print-brand-header">
+              <img src="assets/bios-logo-transparent.png" alt="BIOS Official Logo" class="print-brand-logo brand-logo-img" />
+              <div class="print-brand-info">
+                <h2>BIOS</h2>
+                <div class="print-brand-tagline">BUILDING INTELLIGENT OUTCOMES WITH SOLUTION</div>
+                <div class="print-brand-desc">Computer Systems, Laptops, Components & Accessories</div>
+              </div>
+            </div>
+            <div class="invoice-meta">
+              <div class="invoice-title">TAX INVOICE</div>
+              <div class="invoice-meta-label">Invoice No:</div>
+              <div class="invoice-meta-val" id="inv-preview-no">BIOS-2026-0001</div>
+              <div class="invoice-meta-label">Date:</div>
+              <div class="invoice-meta-val" id="inv-preview-date">14-Aug-2026</div>
+            </div>
+          </div>
 
-</a>
-<div><small>LOCATION</small><b>Magadi Road, Bangalore, Karnataka</b></div><div><small>PHONE</small><a href="tel:+918884481178">+91 88844 81178</a><a href="tel:+917676988838">+91 76769 88838</a></div><div><small>EMAIL</small><a href="mailto:biosgroupofcompany@gmail.com">biosgroupofcompany@gmail.com</a></div></div>
-</div>
-</div>
-</section>
-</main>
+          <div class="invoice-details-grid">
+            <div>
+              <div class="invoice-party-title">BILLED BY</div>
+              <div class="invoice-party-details">
+                <div class="invoice-party-name">BIOS Technologies</div>
+                <p>No 38/1 1st main road KP Agrahar Magadi Road bangalore-23</p>
+                <p>Email: biosgroupofcompany@gmail.com</p>
+                <p>Phone: +91 8884481178 & 7676988838</p>
+                <p>GSTIN: #NA</p>
+              </div>
+            </div>
+            <div>
+              <div class="invoice-party-title">BILLED TO</div>
+              <div class="invoice-party-details" id="inv-preview-client">
+                <div class="invoice-party-name" id="inv-preview-client-name">John Doe</div>
+                <p id="inv-preview-client-phone">Phone: +91 9988776655</p>
+                <p id="inv-preview-client-address" style="display: none;"></p>
+                <p id="inv-preview-client-gst" style="display: none; font-weight: 600; color: #4f46e5;"></p>
+              </div>
+            </div>
+          </div>
 
-<footer>
-<div class="container footer-grid">
-<div class="footer-main"><a class="logo" href="#home" aria-label="BIOS home">
-  <img src="assets/bios-logo.png" alt="BIOS - Building Intelligent Outcomes With Solution">
-</a><p>BUILDING INTELLIGENT<br>OUTCOMES WITH SOLUTION</p><div class="social"><a href="https://www.instagram.com/bios_tech_official/" target="_blank">Instagram</a><a href="https://www.facebook.com/" target="_blank">Facebook</a><a href="https://wa.me/918884481178" target="_blank">WhatsApp</a></div></div>
-<div><h4>EXPLORE</h4><a href="#about">About BIOS</a><a href="#services">Services</a><a href="#process">Process</a><a href="#why">Why BIOS</a></div>
-<div><h4>SERVICES</h4><a href="#services">PC Building</a><a href="#services">Computer Service</a><a href="#services">Upgrades</a><a href="#services">Spare Parts</a><a href="#services">Sales</a></div>
-<div><h4>CONTACT</h4><p>Magadi Road,<br>Bangalore, Karnataka</p><a href="tel:+918884481178">+91 88844 81178</a><a href="tel:+917676988838">+91 76769 88838</a><a href="mailto:biosgroupofcompany@gmail.com">biosgroupofcompany@gmail.com</a></div>
-</div>
-<div class="container copyright"><span>© 2026 BIOS — All rights reserved.</span><span>Technology • Service • Solutions</span></div>
-</footer>
-<script src="script.js"></script>
+          <table class="invoice-table">
+            <thead>
+              <tr>
+                <th>Service / Product Description</th>
+                <th style="text-align: center;">Qty</th>
+                <th style="text-align: right;">Unit Rate</th>
+                <th style="text-align: right;">Base Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight: 600;">
+                  <span id="inv-preview-product">IT Advisory & Software Consultation</span>
+                  <div id="inv-preview-serial" style="font-size: 0.75rem; color: #64748b; font-family: monospace;"></div>
+                </td>
+                <td style="text-align: center;" id="inv-preview-qty">1</td>
+                <td style="text-align: right;" id="inv-preview-unit-rate">₹10,000.00</td>
+                <td style="text-align: right; font-weight: 600;" id="inv-preview-base">₹10,000.00</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="invoice-summary-area">
+            <div class="invoice-summary-box">
+              <div class="invoice-summary-row">
+                <span>Subtotal (Base)</span>
+                <span id="inv-preview-subtotal">₹10,000.00</span>
+              </div>
+              <div class="invoice-summary-row">
+                <span>GST (<span id="inv-preview-gst-rate">18%</span>)</span>
+                <span id="inv-preview-gst">₹1,800.00</span>
+              </div>
+              <div class="invoice-summary-row total">
+                <span>Grand Total</span>
+                <span id="inv-preview-total">₹11,800.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="invoice-terms">
+            <p>Thank you for choosing BIOS for your computing & IT solutions!</p>
+            <p style="margin-top: 0.25rem; font-weight: 500;">Warranty terms as per manufacturer policy. All goods received in good condition.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" id="close-invoice-modal-btn">Close</button>
+        <button type="button" class="btn btn-primary" id="print-invoice-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print Invoice
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. PURCHASE ENTRY MODAL (ADD / EDIT) -->
+  <div class="modal-overlay" id="purchase-modal">
+    <div class="modal-content modal-xl">
+      <div class="modal-header">
+        <h4 id="purchase-modal-title">New Purchase Entry</h4>
+        <button class="modal-close-btn" id="close-purchase-modal-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="purchase-form">
+        <input type="hidden" id="purchase-edit-id">
+        <div class="modal-body">
+          
+          <!-- Supplier & Invoice Headers -->
+          <div style="background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <h5 style="margin-bottom: 0.75rem; color: var(--primary);">Supplier & Invoice Details</h5>
+            <div class="form-grid-4">
+              <div class="form-group">
+                <label for="purchase-supplier">Supplier Name *</label>
+                <input type="text" id="purchase-supplier" required placeholder="e.g. Supertron / Rashi / Ingram" list="purchase-supplier-list">
+                <datalist id="purchase-supplier-list"></datalist>
+              </div>
+              <div class="form-group">
+                <label for="purchase-supplier-phone">Supplier Phone</label>
+                <input type="tel" id="purchase-supplier-phone" placeholder="Contact number">
+              </div>
+              <div class="form-group">
+                <label for="purchase-invoice-no">Purchase Invoice No. *</label>
+                <input type="text" id="purchase-invoice-no" required placeholder="e.g. SUP-INV-89102">
+              </div>
+              <div class="form-group">
+                <label for="purchase-date">Purchase Date *</label>
+                <input type="date" id="purchase-date" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item Specifications -->
+          <div style="padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <h5 style="margin-bottom: 0.75rem; color: var(--primary);">Product / Component Specifications</h5>
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="purchase-item-code">Item Code * (Unique SKU)</label>
+                <input type="text" id="purchase-item-code" required placeholder="e.g. CPU-INTEL-13400F" list="inventory-code-list">
+                <datalist id="inventory-code-list"></datalist>
+              </div>
+              <div class="form-group" style="grid-column: span 2;">
+                <label for="purchase-item-name">Item Name / Description *</label>
+                <input type="text" id="purchase-item-name" required placeholder="e.g. Intel Core i5-13400F 10-Core Processor">
+              </div>
+            </div>
+
+            <div class="form-grid-4" style="margin-top: 0.5rem;">
+              <div class="form-group">
+                <label for="purchase-category">Category *</label>
+                <select id="purchase-category" required>
+                  <option value="CPU">CPU / Processor</option>
+                  <option value="Motherboard">Motherboard</option>
+                  <option value="RAM">RAM / Memory</option>
+                  <option value="Storage">Storage (SSD / HDD)</option>
+                  <option value="GPU">GPU / Graphics Card</option>
+                  <option value="PSU">Power Supply (PSU)</option>
+                  <option value="Cabinet">Cabinet / Case</option>
+                  <option value="Cooler">Cooler / Fan</option>
+                  <option value="Laptop">Laptop / Notebook</option>
+                  <option value="Finished PC">Finished PC / Prebuilt</option>
+                  <option value="Monitor">Monitor / Display</option>
+                  <option value="Accessory">Accessories & Peripherals</option>
+                  <option value="Spare Part">Spare Part / Component</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="purchase-brand">Brand *</label>
+                <input type="text" id="purchase-brand" required placeholder="e.g. Intel, ASUS, Corsair">
+              </div>
+              <div class="form-group">
+                <label for="purchase-model">Model / Specs</label>
+                <input type="text" id="purchase-model" placeholder="e.g. 13400F Box Pack">
+              </div>
+              <div class="form-group">
+                <label for="purchase-min-stock">Minimum Stock Alert</label>
+                <input type="number" id="purchase-min-stock" min="1" step="1" value="2">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 0.5rem;">
+              <label for="purchase-serial-numbers">Serial Numbers (For Laptops, GPUs, Motherboards - comma separated if multiple)</label>
+              <textarea id="purchase-serial-numbers" rows="2" placeholder="e.g. SN10001, SN10002, SN10003"></textarea>
+            </div>
+          </div>
+
+          <!-- Quantity, Cost, GST & Payment Calculations -->
+          <div style="background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border);">
+            <h5 style="margin-bottom: 0.75rem; color: var(--primary);">Pricing, GST & Supplier Payment</h5>
+            
+            <div class="form-grid-4">
+              <div class="form-group">
+                <label for="purchase-qty">Purchase Quantity *</label>
+                <input type="number" id="purchase-qty" min="1" step="1" value="1" required>
+              </div>
+              <div class="form-group">
+                <label for="purchase-rate">Purchase Rate (Unit ₹) *</label>
+                <input type="number" id="purchase-rate" min="0" step="0.01" required placeholder="0.00">
+              </div>
+              <div class="form-group">
+                <label for="purchase-discount">Discount (₹ Total)</label>
+                <input type="number" id="purchase-discount" min="0" step="0.01" value="0">
+              </div>
+              <div class="form-group">
+                <label for="purchase-gst-rate">GST Rate (%) *</label>
+                <select id="purchase-gst-rate" required>
+                  <option value="18">18% GST (Standard)</option>
+                  <option value="12">12% GST</option>
+                  <option value="28">28% GST</option>
+                  <option value="5">5% GST</option>
+                  <option value="0">0% (Nil / Exempted)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-3" style="margin-top: 0.75rem;">
+              <div class="form-group">
+                <label for="purchase-selling-rate">Selling Rate / MRP (Unit ₹)</label>
+                <input type="number" id="purchase-selling-rate" min="0" step="0.01" placeholder="For stock & invoice autofill">
+              </div>
+              <div class="form-group">
+                <label for="purchase-paid-amount">Paid Amount (₹) *</label>
+                <input type="number" id="purchase-paid-amount" min="0" step="0.01" required value="0">
+              </div>
+              <div class="form-group">
+                <label for="purchase-payment-method">Payment Method</label>
+                <select id="purchase-payment-method">
+                  <option value="Cash">Cash</option><option value="UPI">UPI</option><option value="Bank">Bank Transfer</option><option value="Card">Card</option><option value="Credit">Credit / Pay Later</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="purchase-balance-amount">Balance Amount (Auto ₹)</label>
+                <input type="text" id="purchase-balance-amount" readonly style="background-color: #ffffff; font-weight: 700; color: var(--danger-dark);">
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 1.5rem; margin-top: 1rem; font-size: 0.95rem; font-weight: 700; border-top: 1px solid var(--border); padding-top: 0.75rem;">
+              <div>Taxable Value: <span id="purchase-calc-taxable">₹0.00</span></div>
+              <div>GST: <span id="purchase-calc-gst">₹0.00</span></div>
+              <div style="color: var(--primary); font-size: 1.15rem;">Total Purchase Amount: <span id="purchase-calc-total">₹0.00</span></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="cancel-purchase-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="save-purchase-btn">Save Purchase & Increase Stock</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 6. STOCK ADJUSTMENT MODAL -->
+  <div class="modal-overlay" id="stock-adjust-modal">
+    <div class="modal-content modal-md">
+      <div class="modal-header">
+        <h4>Stock Adjustment (±)</h4>
+        <button class="modal-close-btn" id="close-stock-adjust-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="stock-adjust-form">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="adjust-item-select">Select Inventory Item *</label>
+            <select id="adjust-item-select" required>
+              <option value="">-- Choose item to adjust --</option>
+            </select>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="adjust-type">Adjustment Action *</label>
+              <select id="adjust-type" required>
+                <option value="ADD">Add Stock (+ Qty)</option>
+                <option value="DEDUCT">Deduct Stock (- Qty)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="adjust-qty">Quantity *</label>
+              <input type="number" id="adjust-qty" min="1" step="1" value="1" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="adjust-reason">Adjustment Reason *</label>
+            <select id="adjust-reason" required>
+              <option value="Physical Count Correction">Physical Inventory Count Correction</option>
+              <option value="Damaged / Defective Part">Damaged / Defective Part</option>
+              <option value="Demo / Testing Unit">Demo / Shop Display Unit</option>
+              <option value="Internal Use">Internal Office / Testing Use</option>
+              <option value="Stock Audit Reconciliation">Stock Audit Reconciliation</option>
+              <option value="Other">Other Reason</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="adjust-remarks">Remarks / Reference Note</label>
+            <input type="text" id="adjust-remarks" placeholder="Optional details">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="cancel-stock-adjust-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Apply Stock Adjustment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 7. SALES RETURN MODAL -->
+  <div class="modal-overlay" id="sales-return-modal">
+    <div class="modal-content modal-md">
+      <div class="modal-header">
+        <h4>New Sales Return (Restock Item)</h4>
+        <button class="modal-close-btn" id="close-sales-return-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="sales-return-form">
+        <div class="modal-body">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="sales-return-inv">Select Sales Invoice *</label>
+              <select id="sales-return-inv" required>
+                <option value="">-- Choose Sales Invoice --</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="sales-return-date">Return Date *</label>
+              <input type="date" id="sales-return-date" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="sales-return-item-name">Product / Item Name</label>
+            <input type="text" id="sales-return-item-name" readonly style="background-color: var(--secondary-light);">
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="sales-return-qty">Return Quantity *</label>
+              <input type="number" id="sales-return-qty" min="1" step="1" value="1" required>
+            </div>
+            <div class="form-group">
+              <label for="sales-return-refund">Refund / Credit Amount (₹) *</label>
+              <input type="number" id="sales-return-refund" min="0" step="0.01" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="sales-return-reason">Reason for Return *</label>
+            <input type="text" id="sales-return-reason" required placeholder="e.g. Customer returned, defective swap, wrong specs">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="cancel-sales-return-btn">Cancel</button>
+          <button type="submit" class="btn btn-success">Save Return & Increase Stock</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 8. PURCHASE RETURN MODAL -->
+  <div class="modal-overlay" id="purchase-return-modal">
+    <div class="modal-content modal-md">
+      <div class="modal-header">
+        <h4>New Purchase Return (Debit to Supplier)</h4>
+        <button class="modal-close-btn" id="close-purchase-return-modal-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="purchase-return-form">
+        <div class="modal-body">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="purchase-return-inv">Select Purchase Bill *</label>
+              <select id="purchase-return-inv" required>
+                <option value="">-- Choose Purchase Invoice --</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="purchase-return-date">Return Date *</label>
+              <input type="date" id="purchase-return-date" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="purchase-return-item-desc">Item Description</label>
+            <input type="text" id="purchase-return-item-desc" readonly style="background-color: var(--secondary-light);">
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="purchase-return-qty">Return Qty *</label>
+              <input type="number" id="purchase-return-qty" min="1" step="1" value="1" required>
+            </div>
+            <div class="form-group">
+              <label for="purchase-return-amount">Debit / Refund Amount (₹) *</label>
+              <input type="number" id="purchase-return-amount" min="0" step="0.01" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="purchase-return-reason">Reason for Return *</label>
+            <input type="text" id="purchase-return-reason" required placeholder="e.g. DOA / Dead on Arrival, Warranty RMA, Wrong Part">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="cancel-purchase-return-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Return & Deduct Stock</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 9. SERIAL NUMBERS VIEWER MODAL -->
+  <div class="modal-overlay" id="serial-modal">
+    <div class="modal-content modal-md">
+      <div class="modal-header">
+        <h4 id="serial-modal-title">Tracked Serial Numbers</h4>
+        <button class="modal-close-btn" id="close-serial-modal-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;" id="serial-modal-subtitle"></p>
+        <div class="serial-tags-container" id="serial-tags-list" style="max-height: 250px;">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" id="close-serial-modal-btn2">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. PURCHASE INVOICE PRINT PREVIEW MODAL -->
+  <div class="modal-overlay" id="purchase-view-modal">
+    <div class="modal-content invoice-modal">
+      <div class="modal-header">
+        <h4>Purchase Goods Receipt Voucher</h4>
+        <button class="modal-close-btn" id="close-purchase-view-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" style="background-color: #f1f5f9;">
+        <div class="invoice-preview-card" id="purchase-invoice-print-area">
+          <div class="invoice-header-row">
+            <div class="print-brand-header">
+              <img src="assets/bios-logo-transparent.png" alt="BIOS Official Logo" class="print-brand-logo brand-logo-img" />
+              <div class="print-brand-info">
+                <h2>BIOS</h2>
+                <div class="print-brand-tagline">BUILDING INTELLIGENT OUTCOMES WITH SOLUTION</div>
+                <div class="print-brand-desc">Inward Goods Receipt & Purchase Voucher</div>
+              </div>
+            </div>
+            <div class="invoice-meta">
+              <div class="invoice-title" style="color: #f59e0b;">PURCHASE BILL</div>
+              <div class="invoice-meta-label">Purchase Inv #:</div>
+              <div class="invoice-meta-val" id="purch-prev-inv">--</div>
+              <div class="invoice-meta-label">Date:</div>
+              <div class="invoice-meta-val" id="purch-prev-date">--</div>
+            </div>
+          </div>
+
+          <div class="invoice-details-grid">
+            <div>
+              <div class="invoice-party-title">SUPPLIER DETAILS</div>
+              <div class="invoice-party-details">
+                <div class="invoice-party-name" id="purch-prev-supplier">Supplier Name</div>
+                <p id="purch-prev-supplier-phone">Phone: --</p>
+              </div>
+            </div>
+            <div>
+              <div class="invoice-party-title">RECEIVED AT STORE</div>
+              <div class="invoice-party-details">
+                <div class="invoice-party-name">BIOS Store & Warehouse</div>
+                <p>No 38/1 1st main road KP Agrahar Magadi Road bangalore-23</p>
+                <p>Status: Inward Stock Recorded</p>
+              </div>
+            </div>
+          </div>
+
+          <table class="invoice-table">
+            <thead>
+              <tr>
+                <th>Item Code & Name</th>
+                <th>Brand / Model</th>
+                <th style="text-align: center;">Qty</th>
+                <th style="text-align: right;">Unit Rate</th>
+                <th style="text-align: right;">Total Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight: 600;">
+                  <span id="purch-prev-item">Processor</span>
+                  <div id="purch-prev-serials" style="font-size: 0.75rem; color: #64748b; font-family: monospace;"></div>
+                </td>
+                <td id="purch-prev-brand-model">Intel</td>
+                <td style="text-align: center;" id="purch-prev-qty">1</td>
+                <td style="text-align: right;" id="purch-prev-rate">₹0.00</td>
+                <td style="text-align: right; font-weight: 600;" id="purch-prev-total">₹0.00</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="invoice-summary-area">
+            <div class="invoice-summary-box">
+              <div class="invoice-summary-row">
+                <span>Taxable Value</span>
+                <span id="purch-prev-taxable">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row">
+                <span>GST (<span id="purch-prev-gst-rate">18%</span>)</span>
+                <span id="purch-prev-gst">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row total">
+                <span>Bill Total</span>
+                <span id="purch-prev-grand">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row" style="margin-top: 0.25rem;">
+                <span>Paid Amount</span>
+                <span id="purch-prev-paid" style="color: var(--success-dark); font-weight: 700;">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row" style="border-top: 1px solid var(--border); padding-top: 0.25rem;">
+                <span>Balance Due</span>
+                <span id="purch-prev-balance" style="color: var(--danger-dark); font-weight: 700;">₹0.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" id="close-purchase-view-btn2">Close</button>
+        <button type="button" class="btn btn-primary" id="print-purchase-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print Purchase Voucher
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11. PC BUILD QUOTATION & SPEC SHEET PRINT PREVIEW MODAL -->
+  <div class="modal-overlay" id="pc-view-modal">
+    <div class="modal-content invoice-modal">
+      <div class="modal-header">
+        <h4>PC Build Quotation & Specification</h4>
+        <button class="modal-close-btn" id="close-pc-view-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" style="background-color: #f1f5f9;">
+        <div class="invoice-preview-card" id="pc-build-print-area">
+          <div class="invoice-header-row">
+            <div class="print-brand-header">
+              <img src="assets/bios-logo-transparent.png" alt="BIOS Official Logo" class="print-brand-logo brand-logo-img" />
+              <div class="print-brand-info">
+                <h2>BIOS</h2>
+                <div class="print-brand-tagline">BUILDING INTELLIGENT OUTCOMES WITH SOLUTION</div>
+                <div class="print-brand-desc">Custom Rig Assembly & System Specification Sheet</div>
+              </div>
+            </div>
+            <div class="invoice-meta">
+              <div class="invoice-title" style="color: #6366f1;">PC SPEC SHEET</div>
+              <div class="invoice-meta-label">Build ID:</div>
+              <div class="invoice-meta-val" id="pc-prev-build-id">--</div>
+              <div class="invoice-meta-label">Assembly Date:</div>
+              <div class="invoice-meta-val" id="pc-prev-date">--</div>
+            </div>
+          </div>
+
+          <div class="invoice-details-grid">
+            <div>
+              <div class="invoice-party-title">ASSEMBLED BY</div>
+              <div class="invoice-party-details">
+                <div class="invoice-party-name">BIOS Custom Rig Lab</div>
+                <p>No 38/1 1st main road KP Agrahar Magadi Road bangalore-23</p>
+                <p>Email: support@bios.solutions</p>
+                <p>Phone: +91 8884481178 & 7676988838</p>
+              </div>
+            </div>
+            <div>
+              <div class="invoice-party-title">CUSTOMER DETAILS</div>
+              <div class="invoice-party-details" id="pc-prev-client">
+                <div class="invoice-party-name" id="pc-prev-client-name">Shop Display Build</div>
+                <p id="pc-prev-client-phone">Phone: --</p>
+                <p id="pc-prev-client-address" style="display: none;"></p>
+                <p id="pc-prev-client-gst" style="display: none; font-weight: 600; color: #6366f1;"></p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: var(--bg-main); padding: 0.75rem 1rem; border-radius: var(--radius-md); margin-bottom: 1rem; border: 1px solid var(--border);">
+            <div style="font-size: 0.85rem; color: var(--text-muted);">PC Rig Model:</div>
+            <div style="font-size: 1.15rem; font-weight: 800; color: var(--primary);" id="pc-prev-model-name">--</div>
+            <div style="font-size: 0.8rem; font-family: monospace; color: var(--text-muted);" id="pc-prev-serial">Serial / Tag: --</div>
+          </div>
+
+          <table class="invoice-table">
+            <thead>
+              <tr>
+                <th>Component / Slot</th>
+                <th>Hardware Specification</th>
+                <th style="text-align: center;">Qty</th>
+                <th style="text-align: right;">Unit Price (₹)</th>
+                <th style="text-align: right;">Total (₹)</th>
+              </tr>
+            </thead>
+            <tbody id="pc-prev-components-tbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+
+          <div class="invoice-summary-area">
+            <div class="invoice-summary-box">
+              <div class="invoice-summary-row">
+                <span>Components Subtotal</span>
+                <span id="pc-prev-comp-total">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row">
+                <span>Assembly & Stress-Testing Labor</span>
+                <span id="pc-prev-labor">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row total">
+                <span>Final Price / Quotation</span>
+                <span id="pc-prev-final-price">₹0.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="invoice-terms">
+            <p>100% genuine components with official manufacturer warranty.</p>
+            <p style="margin-top: 0.25rem; font-weight: 500;">Rig assembled and thoroughly burn-in stress tested by BIOS Certified Engineers.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" id="close-pc-view-btn2">Close</button>
+        <button type="button" class="btn btn-primary" id="print-pc-spec-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print Spec Sheet / Quotation
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12. SERVICE JOB CARD MODAL (ADD / EDIT) -->
+  <div class="modal-overlay" id="jobcard-modal">
+    <div class="modal-content modal-xl">
+      <div class="modal-header">
+        <h4 id="jobcard-modal-title">New Service Job Card</h4>
+        <button class="modal-close-btn" id="close-jobcard-modal-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="jobcard-form">
+        <input type="hidden" id="jobcard-edit-id">
+        <input type="hidden" id="jobcard-from-estimation-id">
+        <div class="modal-body">
+          
+          <!-- Job Info & Dates -->
+          <div style="background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <div class="form-grid-4">
+              <div class="form-group">
+                <label for="jobcard-number">Job Card # (Auto)</label>
+                <input type="text" id="jobcard-number" readonly style="background-color: var(--secondary-light); font-weight: 700; font-family: monospace;">
+              </div>
+              <div class="form-group">
+                <label for="jobcard-date">Received Date *</label>
+                <input type="date" id="jobcard-date" required>
+              </div>
+              <div class="form-group">
+                <label for="jobcard-delivery-date">Expected Delivery Date *</label>
+                <input type="date" id="jobcard-delivery-date" required>
+              </div>
+              <div class="form-group">
+                <label for="jobcard-status">Service Status *</label>
+                <select id="jobcard-status" required style="font-weight: 700;">
+                  <option value="Open">Open</option>
+                  <option value="Under Service">Under Service</option>
+                  <option value="Ready">Ready</option>
+                  <option value="Delivered">Delivered</option>
+                  <option value="Closed">Closed</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer Details -->
+          <div style="padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <h5 style="margin-bottom: 0.75rem; color: var(--primary);">1. Customer Details</h5>
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="jobcard-customer-name">Customer Name *</label>
+                <input type="text" id="jobcard-customer-name" required placeholder="Enter customer full name" list="service-customer-list">
+                <datalist id="service-customer-list"></datalist>
+              </div>
+              <div class="form-group">
+                <label for="jobcard-customer-mobile">Mobile Number *</label>
+                <input type="tel" id="jobcard-customer-mobile" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+              </div>
+              <div class="form-group">
+                <label for="jobcard-customer-address">Address / Location</label>
+                <input type="text" id="jobcard-customer-address" placeholder="Door No, Street, City">
+              </div>
+            </div>
+          </div>
+
+          <!-- Device Specifications & Issue -->
+          <div style="background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <h5 style="margin-bottom: 0.75rem; color: var(--primary);">2. Device Details & Customer Complaint</h5>
+            <div class="form-grid-4">
+              <div class="form-group">
+                <label for="jobcard-device-type">Device Type *</label>
+                <select id="jobcard-device-type" required>
+                  <option value="Laptop">Laptop</option>
+                  <option value="Desktop">Desktop / PC</option>
+                  <option value="All-in-One">All-in-One PC</option>
+                  <option value="MacBook">MacBook / Apple</option>
+                  <option value="Workstation / Server">Workstation / Server</option>
+                  <option value="Other">Other Device</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="jobcard-device-brand">Brand *</label>
+                <input type="text" id="jobcard-device-brand" required placeholder="e.g. Dell / HP / Lenovo / ASUS / Acer / Apple" list="brand-suggestions">
+                <datalist id="brand-suggestions">
+                  <option value="Dell">
+                  <option value="HP">
+                  <option value="Lenovo">
+                  <option value="ASUS">
+                  <option value="Acer">
+                  <option value="Apple">
+                  <option value="MSI">
+                  <option value="Samsung">
+                  <option value="Custom Built PC">
+                </datalist>
+              </div>
+              <div class="form-group">
+                <label for="jobcard-device-model">Model *</label>
+                <input type="text" id="jobcard-device-model" required placeholder="e.g. Inspiron 15 3520 / ThinkPad E14 / Vivobook">
+              </div>
+              <div class="form-group">
+                <label for="jobcard-device-serial">Serial Number / Service Tag</label>
+                <input type="text" id="jobcard-device-serial" placeholder="e.g. 8H3G9X2 / SN-8928174">
+              </div>
+            </div>
+
+            <div class="form-grid" style="margin-top: 0.75rem;">
+              <div class="form-group">
+                <label for="jobcard-complaint">Problem / Customer Complaint *</label>
+                <textarea id="jobcard-complaint" required rows="2" placeholder="e.g. Display blinking, Blue Screen error on startup, Hinges broken, Slow performance & overheating, RAM upgrade needed"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="jobcard-technician">Technician / Assigned Person *</label>
+                <input type="text" id="jobcard-technician" required placeholder="e.g. Alex (Hardware Specialist)" list="technician-list">
+                <datalist id="technician-list">
+                  <option value="Senior Hardware Engineer">
+                  <option value="Laptop Chip-Level Technician">
+                  <option value="Software & OS Specialist">
+                  <option value="General Service Engineer">
+                </datalist>
+                <label for="jobcard-tech-remarks" style="margin-top: 0.5rem;">Diagnostic & Technical Remarks</label>
+                <input type="text" id="jobcard-tech-remarks" placeholder="Diagnosis findings, physical condition, accessories received (Charger/Bag)">
+              </div>
+            </div>
+          </div>
+
+          <!-- Labour Charges Section -->
+          <div style="padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <h5 style="margin: 0; color: var(--primary);">3. Labour Charges</h5>
+              <button type="button" class="btn btn-secondary btn-sm" id="add-jobcard-labour-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                + Add Labour Item
+              </button>
+            </div>
+            <div id="jobcard-labour-container">
+              <!-- Dynamic labour rows -->
+            </div>
+            <div style="text-align: right; font-weight: 600; font-size: 0.9rem; margin-top: 0.5rem;">
+              Total Labour: <span id="jobcard-calc-labour-total" style="color: var(--primary);">₹0.00</span>
+            </div>
+          </div>
+
+          <!-- Spare Parts Section (Connected to Stock Maintenance) -->
+          <div style="background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <div>
+                <h5 style="margin: 0; color: var(--primary);">4. Spare Parts & Components (Integrated with Live Stock)</h5>
+                <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">Select parts from inventory. Stock automatically decreases upon saving.</p>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" id="add-jobcard-part-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                + Add Spare Part from Stock
+              </button>
+            </div>
+            <div id="jobcard-parts-container">
+              <!-- Dynamic parts rows -->
+            </div>
+            <div style="text-align: right; font-weight: 600; font-size: 0.9rem; margin-top: 0.5rem;">
+              Total Parts: <span id="jobcard-calc-parts-total" style="color: var(--primary);">₹0.00</span>
+            </div>
+          </div>
+
+          <!-- Discount, Tax & Grand Total -->
+          <div style="background: var(--card-bg); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border);">
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="jobcard-discount">Discount (₹ Total)</label>
+                <input type="number" id="jobcard-discount" min="0" step="0.01" value="0">
+              </div>
+              <div class="form-group">
+                <label for="jobcard-tax-rate">GST Tax Rate (%)</label>
+                <select id="jobcard-tax-rate">
+                  <option value="18">18% GST (Standard)</option>
+                  <option value="12">12% GST</option>
+                  <option value="5">5% GST</option>
+                  <option value="28">28% GST</option>
+                  <option value="0">0% (Exempted / Nil)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="jobcard-tax-amount">GST Amount (Auto ₹)</label>
+                <input type="text" id="jobcard-tax-amount" readonly style="background-color: var(--secondary-light); font-weight: 700;">
+              </div>
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 2rem; margin-top: 0.75rem; font-size: 1rem; font-weight: 700; border-top: 1px solid var(--border); padding-top: 0.75rem;">
+              <div>Subtotal (Labour + Parts): <span id="jobcard-calc-subtotal">₹0.00</span></div>
+              <div style="color: var(--primary); font-size: 1.2rem;">Grand Total: <span id="jobcard-calc-grand-total">₹0.00</span></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="cancel-jobcard-btn">Cancel</button>
+          <button type="button" class="btn btn-danger" id="close-jobcard-direct-btn" style="display: none;" onclick="handleDirectCloseFromModal()">Close Job Card</button>
+          <button type="submit" class="btn btn-primary" id="save-jobcard-btn">Save Job Card & Update Stock</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 13. ESTIMATION MODAL (ADD / EDIT / QUOTATIONS) -->
+  <div class="modal-overlay" id="estimation-modal">
+    <div class="modal-content modal-xl">
+      <div class="modal-header">
+        <h4 id="estimation-modal-title">New Repair & Service Estimation</h4>
+        <button class="modal-close-btn" id="close-estimation-modal-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="estimation-form">
+        <input type="hidden" id="estimation-edit-id">
+        <div class="modal-body">
+          <div class="form-grid-3" style="background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <div class="form-group">
+              <label for="estimation-number">Estimation # (Auto)</label>
+              <input type="text" id="estimation-number" readonly style="background-color: var(--secondary-light); font-weight: 700; font-family: monospace;">
+            </div>
+            <div class="form-group">
+              <label for="estimation-date">Estimation Date *</label>
+              <input type="date" id="estimation-date" required>
+            </div>
+            <div class="form-group">
+              <label for="estimation-status">Approval Status *</label>
+              <select id="estimation-status" required>
+                <option value="Draft">Draft / Pending Customer Approval</option>
+                <option value="Approved">Customer Approved</option>
+                <option value="Rejected">Rejected / Cancelled</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <h5 style="margin-bottom: 0.75rem; color: var(--primary);">Customer & Device Details</h5>
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="estimation-customer-name">Customer Name *</label>
+                <input type="text" id="estimation-customer-name" required placeholder="Enter customer full name">
+              </div>
+              <div class="form-group">
+                <label for="estimation-customer-mobile">Mobile Number *</label>
+                <input type="text" id="estimation-customer-mobile" required placeholder="Mobile number">
+              </div>
+              <div class="form-group">
+                <label for="estimation-customer-address">Address</label>
+                <input type="text" id="estimation-customer-address" placeholder="Location / Address">
+              </div>
+            </div>
+
+            <div class="form-grid-4" style="margin-top: 0.5rem;">
+              <div class="form-group">
+                <label for="estimation-device-type">Device Type *</label>
+                <select id="estimation-device-type" required>
+                  <option value="Laptop">Laptop</option>
+                  <option value="Desktop">Desktop / PC</option>
+                  <option value="All-in-One">All-in-One PC</option>
+                  <option value="MacBook">MacBook / Apple</option>
+                  <option value="Other">Other Device</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="estimation-device-brand">Brand *</label>
+                <input type="text" id="estimation-device-brand" required placeholder="e.g. Dell, HP, ASUS">
+              </div>
+              <div class="form-group">
+                <label for="estimation-device-model">Model *</label>
+                <input type="text" id="estimation-device-model" required placeholder="e.g. Latitude 3420">
+              </div>
+              <div class="form-group">
+                <label for="estimation-device-serial">Serial Number</label>
+                <input type="text" id="estimation-device-serial" placeholder="Serial / Tag">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 0.5rem;">
+              <label for="estimation-complaint">Reported Problem / Work Required *</label>
+              <input type="text" id="estimation-complaint" required placeholder="e.g. Screen replacement, Hinges repair, OS reinstall, Battery change">
+            </div>
+          </div>
+
+          <!-- Estimation Labour Breakdown -->
+          <div style="padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <h5 style="margin: 0; color: var(--primary);">Estimated Labour Charges</h5>
+              <button type="button" class="btn btn-secondary btn-sm" id="add-est-labour-btn">
+                + Add Labour Item
+              </button>
+            </div>
+            <div id="estimation-labour-container">
+              <!-- Dynamic estimation labour rows -->
+            </div>
+            <div style="text-align: right; font-weight: 600; font-size: 0.9rem; margin-top: 0.5rem;">
+              Total Estimated Labour: <span id="est-calc-labour-total" style="color: var(--primary);">₹0.00</span>
+            </div>
+          </div>
+
+          <!-- Estimation Spare Parts Breakdown -->
+          <div style="background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <div>
+                <h5 style="margin: 0; color: var(--primary);">Estimated Spare Parts (From Stock Catalog)</h5>
+                <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">Choose parts to quote customer.</p>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" id="add-est-part-btn">
+                + Add Spare Part
+              </button>
+            </div>
+            <div id="estimation-parts-container">
+              <!-- Dynamic estimation parts rows -->
+            </div>
+            <div style="text-align: right; font-weight: 600; font-size: 0.9rem; margin-top: 0.5rem;">
+              Total Estimated Parts: <span id="est-calc-parts-total" style="color: var(--primary);">₹0.00</span>
+            </div>
+          </div>
+
+          <!-- Other Charges & Grand Total -->
+          <div style="background: var(--card-bg); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border);">
+            <div class="form-grid-4">
+              <div class="form-group">
+                <label for="estimation-accessories">Accessories / Adapters (₹)</label>
+                <input type="number" id="estimation-accessories" min="0" step="0.01" value="0">
+              </div>
+              <div class="form-group">
+                <label for="estimation-other-charges">Other Charges (₹)</label>
+                <input type="number" id="estimation-other-charges" min="0" step="0.01" value="0">
+              </div>
+              <div class="form-group">
+                <label for="estimation-discount">Discount (₹)</label>
+                <input type="number" id="estimation-discount" min="0" step="0.01" value="0">
+              </div>
+              <div class="form-group">
+                <label for="estimation-tax-rate">GST Tax Rate (%)</label>
+                <select id="estimation-tax-rate">
+                  <option value="18">18% GST (Standard)</option>
+                  <option value="12">12% GST</option>
+                  <option value="5">5% GST</option>
+                  <option value="28">28% GST</option>
+                  <option value="0">0% (Nil / Exempted)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 0.75rem;">
+              <label for="estimation-notes">Estimation Remarks / Notes for Customer</label>
+              <input type="text" id="estimation-notes" placeholder="e.g. Genuine screen with 1 year warranty. Delivery within 2 days after confirmation.">
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 2rem; margin-top: 0.75rem; font-size: 1rem; font-weight: 700; border-top: 1px solid var(--border); padding-top: 0.75rem;">
+              <div>Taxable Subtotal: <span id="estimation-calc-subtotal">₹0.00</span></div>
+              <div>GST Amount: <span id="estimation-calc-gst-amt">₹0.00</span></div>
+              <div style="color: var(--primary); font-size: 1.2rem;">Total Estimated Amount: <span id="estimation-calc-grand-total">₹0.00</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="cancel-estimation-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="save-estimation-btn">Save Estimation</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 14. SERVICE INVOICE MODAL (GENERATE / EDIT) -->
+  <div class="modal-overlay" id="svc-invoice-modal">
+    <div class="modal-content modal-xl">
+      <div class="modal-header">
+        <h4 id="svc-invoice-modal-title">Generate Service Invoice</h4>
+        <button class="modal-close-btn" id="close-svc-inv-modal-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="svc-invoice-form">
+        <input type="hidden" id="svc-inv-edit-id">
+        <input type="hidden" id="svc-inv-jobcard-id">
+        <div class="modal-body">
+          <div class="form-grid-3" style="background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <div class="form-group">
+              <label for="svc-inv-number">Service Invoice # (Auto)</label>
+              <input type="text" id="svc-inv-number" readonly style="background-color: var(--secondary-light); font-weight: 700; font-family: monospace;">
+            </div>
+            <div class="form-group">
+              <label for="svc-inv-date">Invoice Date *</label>
+              <input type="date" id="svc-inv-date" required>
+            </div>
+            <div class="form-group">
+              <label for="svc-inv-jobcard-select">Link Job Card (Auto-fills Details)</label>
+              <select id="svc-inv-jobcard-select">
+                <option value="">-- Direct Service Billing / Select Job Card --</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <h5 style="margin-bottom: 0.75rem; color: var(--primary);">Customer & Device Information</h5>
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="svc-inv-cust-name">Customer Name *</label>
+                <input type="text" id="svc-inv-cust-name" required placeholder="Customer Full Name">
+              </div>
+              <div class="form-group">
+                <label for="svc-inv-cust-mobile">Mobile Number *</label>
+                <input type="tel" id="svc-inv-cust-mobile" required pattern="[0-9]{10}" placeholder="10-digit mobile">
+              </div>
+              <div class="form-group">
+                <label for="svc-inv-cust-address">Address</label>
+                <input type="text" id="svc-inv-cust-address" placeholder="Address">
+              </div>
+            </div>
+            <div class="form-grid-4" style="margin-top: 0.5rem;">
+              <div class="form-group">
+                <label for="svc-inv-device-type">Device Type *</label>
+                <input type="text" id="svc-inv-device-type" required placeholder="Laptop / Desktop / PC">
+              </div>
+              <div class="form-group">
+                <label for="svc-inv-device-brand">Brand *</label>
+                <input type="text" id="svc-inv-device-brand" required placeholder="e.g. Dell / HP / Lenovo">
+              </div>
+              <div class="form-group">
+                <label for="svc-inv-device-model">Model *</label>
+                <input type="text" id="svc-inv-device-model" required placeholder="Model number">
+              </div>
+              <div class="form-group">
+                <label for="svc-inv-device-serial">Serial Number</label>
+                <input type="text" id="svc-inv-device-serial" placeholder="Serial / Tag">
+              </div>
+            </div>
+          </div>
+
+          <!-- Billing Items Breakdown Summary -->
+          <div style="background: var(--bg-main); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; border: 1px solid var(--border);">
+            <h5 style="margin-bottom: 0.75rem; color: var(--primary);">Service Charges & Costing</h5>
+            <div class="form-grid-4">
+              <div class="form-group">
+                <label for="svc-inv-labour-amt">Total Labour Charges (₹) *</label>
+                <input type="number" id="svc-inv-labour-amt" min="0" step="0.01" value="0" required>
+              </div>
+              <div class="form-group">
+                <label for="svc-inv-parts-amt">Total Parts Charges (₹) *</label>
+                <input type="number" id="svc-inv-parts-amt" min="0" step="0.01" value="0" required>
+              </div>
+              <div class="form-group">
+                <label for="svc-inv-discount">Discount (₹)</label>
+                <input type="number" id="svc-inv-discount" min="0" step="0.01" value="0">
+              </div>
+              <div class="form-group">
+                <label for="svc-inv-gst-rate">GST Tax Rate (%)</label>
+                <select id="svc-inv-gst-rate">
+                  <option value="18">18% GST (Standard)</option>
+                  <option value="12">12% GST</option>
+                  <option value="5">5% GST</option>
+                  <option value="28">28% GST</option>
+                  <option value="0">0% (Nil / Exempted)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Payment Details -->
+            <div class="form-grid-4" style="margin-top: 0.75rem; border-top: 1px dashed var(--border); padding-top: 0.75rem;">
+              <div class="form-group">
+                <label for="svc-inv-payment-status">Payment Status *</label>
+                <select id="svc-inv-payment-status" required style="font-weight: 700;">
+                  <option value="Paid">Paid (Full)</option>
+                  <option value="Partially Paid">Partially Paid</option>
+                  <option value="Pending">Pending / Unpaid</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="svc-inv-payment-method">Payment Method *</label>
+                <select id="svc-inv-payment-method" required>
+                  <option value="UPI">UPI / GPay / PhonePe</option>
+                  <option value="Cash">Cash</option>
+                  <option value="Card">Card</option>
+                  <option value="Net Banking">Net Banking</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="svc-inv-paid-amt">Amount Paid (₹) *</label>
+                <input type="number" id="svc-inv-paid-amt" min="0" step="0.01" value="0" required>
+              </div>
+              <div class="form-group">
+                <label for="svc-inv-balance-amt">Balance Due (Auto ₹)</label>
+                <input type="text" id="svc-inv-balance-amt" readonly style="background-color: #ffffff; font-weight: 700; color: var(--danger-dark);">
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 2rem; margin-top: 0.75rem; font-size: 1rem; font-weight: 700; border-top: 1px solid var(--border); padding-top: 0.75rem;">
+              <div>Taxable Subtotal: <span id="svc-inv-calc-taxable">₹0.00</span></div>
+              <div>GST: <span id="svc-inv-calc-gst">₹0.00</span></div>
+              <div style="color: var(--primary); font-size: 1.2rem;">Grand Total: <span id="svc-inv-calc-grand-total">₹0.00</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="cancel-svc-inv-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="save-svc-inv-btn">Save & Issue Service Invoice</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 15. JOB CARD PRINT PREVIEW MODAL (CLEAN A4) -->
+  <div class="modal-overlay" id="jobcard-view-modal">
+    <div class="modal-content invoice-modal">
+      <div class="modal-header">
+        <h4>Job Card Print Preview</h4>
+        <button class="modal-close-btn" id="close-jobcard-view-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" style="background-color: #f1f5f9;">
+        <div class="invoice-preview-card" id="jobcard-print-area">
+          <div class="invoice-header-row">
+            <div class="print-brand-header">
+              <img src="assets/bios-logo-transparent.png" alt="BIOS Official Logo" class="print-brand-logo brand-logo-img" />
+              <div class="print-brand-info">
+                <h2>BIOS</h2>
+                <div class="print-brand-tagline">BUILDING INTELLIGENT OUTCOMES WITH SOLUTION</div>
+                <div class="print-brand-desc">Laptop, Desktop & PC Service Center | Support: +91 8884481178 & 7676988838</div>
+              </div>
+            </div>
+            <div class="invoice-meta">
+              <div class="invoice-title" style="color: #4f46e5;">SERVICE JOB CARD</div>
+              <div class="invoice-meta-label">Job Card #:</div>
+              <div class="invoice-meta-val" id="jc-prev-number">JC-2026-0001</div>
+              <div class="invoice-meta-label">Date Received:</div>
+              <div class="invoice-meta-val" id="jc-prev-date">--</div>
+              <div class="invoice-meta-label">Exp. Delivery:</div>
+              <div class="invoice-meta-val" id="jc-prev-delv" style="font-weight: 700; color: #4f46e5;">--</div>
+            </div>
+          </div>
+
+          <div class="invoice-details-grid">
+            <div>
+              <div class="invoice-party-title">CUSTOMER DETAILS</div>
+              <div class="invoice-party-details">
+                <div class="invoice-party-name" id="jc-prev-cust-name">--</div>
+                <p id="jc-prev-cust-phone">Phone: --</p>
+                <p id="jc-prev-cust-address">Address: --</p>
+              </div>
+            </div>
+            <div>
+              <div class="invoice-party-title">DEVICE SPECIFICATIONS</div>
+              <div class="invoice-party-details">
+                <div class="invoice-party-name" id="jc-prev-device-model">--</div>
+                <p id="jc-prev-device-type">Type: --</p>
+                <p id="jc-prev-device-serial">Serial / Tag: --</p>
+                <p>Status: <span id="jc-prev-status-badge" style="font-weight: 700; color: #4f46e5;">Open</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Problem & Tech Section -->
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 0.82rem;">
+            <div style="margin-bottom: 0.35rem;">
+              <strong style="color: #0f172a;">Customer Reported Problem / Complaint:</strong>
+              <div id="jc-prev-complaint" style="color: #334155; margin-top: 0.15rem;">--</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px dashed #cbd5e1; padding-top: 0.35rem; margin-top: 0.35rem;">
+              <div><strong>Assigned Technician:</strong> <span id="jc-prev-technician">--</span></div>
+              <div><strong>Tech Remarks:</strong> <span id="jc-prev-remarks">--</span></div>
+            </div>
+          </div>
+
+          <!-- Service Scope Table (Labour & Parts) -->
+          <table class="invoice-table">
+            <thead>
+              <tr>
+                <th>Service Description / Spare Part</th>
+                <th>Type</th>
+                <th style="text-align: center;">Qty</th>
+                <th style="text-align: right;">Rate (₹)</th>
+                <th style="text-align: right;">Amount (₹)</th>
+              </tr>
+            </thead>
+            <tbody id="jc-prev-items-tbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+
+          <div class="invoice-summary-area">
+            <div class="invoice-summary-box">
+              <div class="invoice-summary-row">
+                <span>Total Labour Charges</span>
+                <span id="jc-prev-total-labour">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row">
+                <span>Total Spare Parts & Components</span>
+                <span id="jc-prev-total-parts">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row">
+                <span>Discount</span>
+                <span id="jc-prev-discount">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row">
+                <span>GST (<span id="jc-prev-tax-rate">18%</span>)</span>
+                <span id="jc-prev-tax-amt">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row total">
+                <span>Estimated / Total Amount</span>
+                <span id="jc-prev-grand-total">₹0.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Signatures & Disclaimer -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.75rem;">
+            <div>
+              <p style="font-weight: 600; color: #0f172a; margin-bottom: 2rem;">Customer Acknowledgment & Signature:</p>
+              <div style="border-top: 1px dashed #94a3b8; width: 80%; padding-top: 0.25rem; color: #64748b;">Signature / Date</div>
+            </div>
+            <div style="text-align: right;">
+              <p style="font-weight: 600; color: #0f172a; margin-bottom: 2rem;">For BIOS Service Center:</p>
+              <div style="border-top: 1px dashed #94a3b8; width: 80%; margin-left: auto; padding-top: 0.25rem; color: #64748b;">Authorized Signatory</div>
+            </div>
+          </div>
+
+          <div class="invoice-terms">
+            <p>1. Estimate is valid for 7 days. Devices not collected within 30 days of completion are subject to storage charges.</p>
+            <p style="margin-top: 0.25rem;">2. Backup your data prior to hardware/OS service. BIOS is not responsible for pre-existing software data loss.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" id="close-jobcard-view-btn2">Close</button>
+        <button type="button" class="btn btn-primary" id="print-jobcard-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print Job Card
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 16. ESTIMATION PRINT PREVIEW MODAL (CLEAN A4) -->
+  <div class="modal-overlay" id="estimation-view-modal">
+    <div class="modal-content invoice-modal">
+      <div class="modal-header">
+        <h4>Estimation Print Preview</h4>
+        <button class="modal-close-btn" id="close-estimation-view-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" style="background-color: #f1f5f9;">
+        <div class="invoice-preview-card" id="estimation-print-area">
+          <div class="invoice-header-row">
+            <div class="print-brand-header">
+              <img src="assets/bios-logo-transparent.png" alt="BIOS Official Logo" class="print-brand-logo brand-logo-img" />
+              <div class="print-brand-info">
+                <h2>BIOS</h2>
+                <div class="print-brand-tagline">BUILDING INTELLIGENT OUTCOMES WITH SOLUTION</div>
+                <div class="print-brand-desc">Service & Repair Cost Estimation | Support: +91 8884481178 & 7676988838</div>
+              </div>
+            </div>
+            <div class="invoice-meta">
+              <div class="invoice-title" style="color: #0ea5e9;">SERVICE ESTIMATION</div>
+              <div class="invoice-meta-label">Estimate #:</div>
+              <div class="invoice-meta-val" id="est-prev-number">EST-2026-0001</div>
+              <div class="invoice-meta-label">Date:</div>
+              <div class="invoice-meta-val" id="est-prev-date">--</div>
+            </div>
+          </div>
+
+          <div class="invoice-details-grid">
+            <div>
+              <div class="invoice-party-title">ESTIMATION FOR</div>
+              <div class="invoice-party-details">
+                <div class="invoice-party-name" id="est-prev-cust-name">--</div>
+                <p id="est-prev-cust-phone">Phone: --</p>
+                <p id="est-prev-cust-address">Address: --</p>
+              </div>
+            </div>
+            <div>
+              <div class="invoice-party-title">DEVICE DETAILS</div>
+              <div class="invoice-party-details">
+                <div class="invoice-party-name" id="est-prev-device-model">--</div>
+                <p id="est-prev-device-type">Type: --</p>
+                <p id="est-prev-device-serial">Serial: --</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 0.82rem;">
+            <strong>Customer Complaint / Requested Service:</strong>
+            <div id="est-prev-complaint" style="color: #334155; margin-top: 0.15rem;">--</div>
+          </div>
+
+          <table class="invoice-table">
+            <thead>
+              <tr>
+                <th>Particulars / Scope of Service</th>
+                <th style="text-align: right;">Estimated Cost (₹)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Labour Charges</strong> (Repair, Installation & Testing)</td>
+                <td style="text-align: right;" id="est-prev-labour">₹0.00</td>
+              </tr>
+              <tr>
+                <td><strong>Spare Parts & Components</strong></td>
+                <td style="text-align: right;" id="est-prev-parts">₹0.00</td>
+              </tr>
+              <tr>
+                <td><strong>Accessories / Adapters</strong></td>
+                <td style="text-align: right;" id="est-prev-accessories">₹0.00</td>
+              </tr>
+              <tr>
+                <td><strong>Other Charges / Diagnostics</strong></td>
+                <td style="text-align: right;" id="est-prev-other">₹0.00</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="invoice-summary-area">
+            <div class="invoice-summary-box">
+              <div class="invoice-summary-row">
+                <span>Subtotal</span>
+                <span id="est-prev-subtotal">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row">
+                <span>Discount</span>
+                <span id="est-prev-discount">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row">
+                <span>GST (<span id="est-prev-tax-rate">18%</span>)</span>
+                <span id="est-prev-tax-amt">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row total">
+                <span>Total Estimated Amount</span>
+                <span id="est-prev-grand-total">₹0.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.75rem; display: flex; justify-content: space-between;">
+            <div>
+              <p style="font-weight: 600; color: #0f172a; margin-bottom: 2rem;">Customer Approval Signature:</p>
+              <div style="border-top: 1px dashed #94a3b8; width: 180px; padding-top: 0.25rem; color: #64748b;">Sign to Proceed with Repair</div>
+            </div>
+            <div style="text-align: right;">
+              <p style="font-weight: 600; color: #0f172a; margin-bottom: 2rem;">Prepared By:</p>
+              <div style="border-top: 1px dashed #94a3b8; width: 180px; margin-left: auto; padding-top: 0.25rem; color: #64748b;">BIOS Service Advisor</div>
+            </div>
+          </div>
+
+          <div class="invoice-terms">
+            <p>This estimation is an approximation of costs. Upon customer approval, this estimate is converted directly to a Service Job Card.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" id="close-estimation-view-btn2">Close</button>
+        <button type="button" class="btn btn-primary" id="print-estimation-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print Estimation
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 17. SERVICE INVOICE PRINT PREVIEW MODAL (CLEAN A4) -->
+  <div class="modal-overlay" id="svc-invoice-view-modal">
+    <div class="modal-content invoice-modal">
+      <div class="modal-header">
+        <h4>Service Tax Invoice Print Preview</h4>
+        <button class="modal-close-btn" id="close-svc-inv-view-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" style="background-color: #f1f5f9;">
+        <div class="invoice-preview-card" id="svc-invoice-print-area">
+          <div class="invoice-header-row">
+            <div class="print-brand-header">
+              <img src="assets/bios-logo-transparent.png" alt="BIOS Official Logo" class="print-brand-logo brand-logo-img" />
+              <div class="print-brand-info">
+                <h2>BIOS</h2>
+                <div class="print-brand-tagline">BUILDING INTELLIGENT OUTCOMES WITH SOLUTION</div>
+                <div class="print-brand-desc">PC, Laptop & Hardware Repair Center | GSTIN: #NA</div>
+              </div>
+            </div>
+            <div class="invoice-meta">
+              <div class="invoice-title" style="color: #4f46e5;">SERVICE TAX INVOICE</div>
+              <div class="invoice-meta-label">Invoice No:</div>
+              <div class="invoice-meta-val" id="sinv-prev-number">SINV-2026-0001</div>
+              <div class="invoice-meta-label">Date:</div>
+              <div class="invoice-meta-val" id="sinv-prev-date">--</div>
+              <div class="invoice-meta-label">Job Card Ref:</div>
+              <div class="invoice-meta-val" id="sinv-prev-jc-ref" style="font-weight: 700;">--</div>
+            </div>
+          </div>
+
+          <div class="invoice-details-grid">
+            <div>
+              <div class="invoice-party-title">BILLED BY</div>
+              <div class="invoice-party-details">
+                <div class="invoice-party-name">BIOS Service & Solutions</div>
+                <p>No 38/1 1st main road KP Agrahar Magadi Road bangalore-23</p>
+                <p>Phone: +91 8884481178 & 7676988838</p>
+                <p>Email: service@bios.solutions</p>
+              </div>
+            </div>
+            <div>
+              <div class="invoice-party-title">BILLED TO</div>
+              <div class="invoice-party-details">
+                <div class="invoice-party-name" id="sinv-prev-cust-name">--</div>
+                <p id="sinv-prev-cust-phone">Phone: --</p>
+                <p id="sinv-prev-cust-address">Address: --</p>
+                <p><strong>Device:</strong> <span id="sinv-prev-device-info">--</span></p>
+              </div>
+            </div>
+          </div>
+
+          <table class="invoice-table">
+            <thead>
+              <tr>
+                <th>Service Particulars / Spare Parts</th>
+                <th style="text-align: center;">Qty</th>
+                <th style="text-align: right;">Rate (₹)</th>
+                <th style="text-align: right;">Amount (₹)</th>
+              </tr>
+            </thead>
+            <tbody id="sinv-prev-items-tbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+
+          <div class="invoice-summary-area">
+            <div class="invoice-summary-box">
+              <div class="invoice-summary-row">
+                <span>Labour Charges</span>
+                <span id="sinv-prev-labour">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row">
+                <span>Parts & Materials</span>
+                <span id="sinv-prev-parts">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row">
+                <span>Discount</span>
+                <span id="sinv-prev-discount">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row">
+                <span>GST (<span id="sinv-prev-gst-rate">18%</span>)</span>
+                <span id="sinv-prev-gst-amt">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row total">
+                <span>Grand Total</span>
+                <span id="sinv-prev-grand-total">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row" style="margin-top: 0.25rem;">
+                <span>Payment Status</span>
+                <span id="sinv-prev-pay-status" style="font-weight: 700;">Paid</span>
+              </div>
+              <div class="invoice-summary-row">
+                <span>Paid Amount</span>
+                <span id="sinv-prev-paid-amt" style="color: var(--success-dark); font-weight: 700;">₹0.00</span>
+              </div>
+              <div class="invoice-summary-row" style="border-top: 1px solid var(--border); padding-top: 0.25rem;">
+                <span>Balance Due</span>
+                <span id="sinv-prev-balance-amt" style="color: var(--danger-dark); font-weight: 700;">₹0.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="invoice-terms">
+            <p>1. 30 days service warranty for the specific repair carried out.</p>
+            <p style="margin-top: 0.25rem;">2. Replacement spare parts warranty is covered as per respective manufacturer policies.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" id="close-svc-inv-view-btn2">Close</button>
+        <button type="button" class="btn btn-primary" id="print-svc-inv-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print Service Invoice
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Finance Transaction Modal -->
+  <div class="modal-overlay" id="finance-transaction-modal">
+    <div class="modal-content finance-modal-content">
+      <div class="modal-header">
+        <h3 id="finance-modal-title">Add Expense</h3>
+        <button class="modal-close" id="finance-modal-close">&times;</button>
+      </div>
+      <form id="finance-transaction-form">
+        <input type="hidden" id="finance-record-id">
+        <input type="hidden" id="finance-record-type">
+        <div class="form-grid">
+          <div class="form-group"><label>Date *</label><input type="date" id="finance-record-date" required></div>
+          <div class="form-group"><label>Amount (₹) *</label><input type="number" id="finance-record-amount" min="0" step="0.01" required></div>
+          <div class="form-group"><label>Category *</label><input type="text" id="finance-record-category" placeholder="Rent / Salary / Vendor Service..." required></div>
+          <div class="form-group"><label>Reference / Bill No.</label><input type="text" id="finance-record-reference" placeholder="Vendor bill / reference"></div>
+          <div class="form-group"><label>Payment Method</label><select id="finance-record-payment-method"><option value="Cash">Cash</option><option value="UPI">UPI</option><option value="Bank">Bank Transfer</option><option value="Card">Card</option></select></div>
+          <div class="form-group" style="grid-column:1/-1;"><label>Description *</label><input type="text" id="finance-record-description" placeholder="What was this transaction for?" required></div>
+          <div class="form-group finance-direct-cost-field" id="finance-direct-cost-wrap" style="display:none;"><label>Vendor Payment (₹)</label><input type="number" id="finance-record-direct-cost" min="0" step="0.01" value="0"></div>
+          <div class="form-group finance-direct-cost-field" id="finance-customer-wrap" style="display:none;"><label>Customer / Vendor / Job</label><input type="text" id="finance-record-customer" placeholder="Vendor name / customer / job reference"></div>
+        </div>
+        <div class="finance-modal-note" id="finance-modal-note"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="finance-modal-cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Transaction</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Finance Opening Cash Modal -->
+  <div class="modal-overlay" id="finance-opening-cash-modal">
+    <div class="modal-content finance-modal-content" style="max-width:520px;">
+      <div class="modal-header"><h3>Set Opening Cash</h3><button class="modal-close" id="finance-opening-cash-close">&times;</button></div>
+      <form id="finance-opening-cash-form">
+        <div class="form-group"><label>Opening Cash Balance (₹) *</label><input type="number" id="finance-opening-cash-amount" min="0" step="0.01" required></div>
+        <div class="finance-modal-note">Enter the actual company cash available at the start of your selected accounting period / migration date. This is used only for Cash in Hand, not P&amp;L.</div>
+        <div class="modal-footer"><button type="button" class="btn btn-outline" id="finance-opening-cash-cancel">Cancel</button><button type="submit" class="btn btn-primary">Save Opening Cash</button></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
 </body>
 </html>
